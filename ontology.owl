@@ -1,0 +1,815 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.representacionconocimientopec2.org/"
+     xml:base="http://www.representacionconocimientopec2.org/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.representacionconocimientopec2.org/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.representacionconocimientopec2.org/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/hasCorrectiveAction -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.representacionconocimientopec2.org/hasCorrectiveAction">
+        <owl:inverseOf rdf:resource="http://www.representacionconocimientopec2.org/isCorrectiveActionFor"/>
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <rdfs:range rdf:resource="http://www.representacionconocimientopec2.org/CorrectiveAction"/>
+        <rdfs:comment>Relates an Incident to a CorrectiveAction.</rdfs:comment>
+        <rdfs:label>hasCorrectiveAction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/hasManufacturer -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.representacionconocimientopec2.org/hasManufacturer">
+        <owl:inverseOf rdf:resource="http://www.representacionconocimientopec2.org/manufactures"/>
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <rdfs:range rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+        <rdfs:comment>Relates a Device to it&apos;s Manufacturer.</rdfs:comment>
+        <rdfs:label>hasManuFacturer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/hasRisk -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.representacionconocimientopec2.org/hasRisk">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <rdfs:range rdf:resource="http://www.representacionconocimientopec2.org/Risk"/>
+        <rdfs:comment>Relates an Incented to a Risk.</rdfs:comment>
+        <rdfs:label>hasRisk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/hasRiskClass -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.representacionconocimientopec2.org/hasRiskClass">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <rdfs:range rdf:resource="http://www.representacionconocimientopec2.org/RiskClass"/>
+        <rdfs:comment>Relates a Device to a RiskClass.</rdfs:comment>
+        <rdfs:label>hasRiskClass</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/involvesDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.representacionconocimientopec2.org/involvesDevice">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <rdfs:range rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <rdfs:comment>Relates an Incident to a Device.</rdfs:comment>
+        <rdfs:label>involvesDevice</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/isCorrectiveActionFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/CorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <rdfs:comment>Relates a CorrectiveAction to the Incident it addresses.</rdfs:comment>
+        <rdfs:label>isCorrectiveActionFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/manufactures -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.representacionconocimientopec2.org/manufactures">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <rdfs:comment>Relates a Manufacturer to the Devices it produces.</rdfs:comment>
+        <rdfs:label>manufactures</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/reportedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.representacionconocimientopec2.org/reportedBy">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <rdfs:range rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+        <rdfs:comment>Relates an Incident to a Manufacturer.</rdfs:comment>
+        <rdfs:label>reportedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/actionType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/actionType">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/CorrectiveAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the type of a CorrectiveAction.</rdfs:comment>
+        <rdfs:label>actionType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/country -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/country">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the country of a Manufacturer.</rdfs:comment>
+        <rdfs:label>country</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/deviceId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/deviceId">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the identifier of a Device.</rdfs:comment>
+        <rdfs:label>deviceId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/deviceName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/deviceName">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the name of a Device.</rdfs:comment>
+        <rdfs:label>deviceName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/deviceType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/deviceType">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the type of a Device as a controlled literal value.</rdfs:comment>
+        <rdfs:label>deviceType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/incidentId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/incidentId">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Stores the identifier of an Incident.</rdfs:comment>
+        <rdfs:label>incidentId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/intendedPurpose -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/intendedPurpose">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the intended purpose of a Device.</rdfs:comment>
+        <rdfs:label>intendedPurpose</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/manufacturerName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/manufacturerName">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the name of a Manufacturer.</rdfs:comment>
+        <rdfs:label>manufacturerName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/reportDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/reportDate">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Stores the report date of an Incident.</rdfs:comment>
+        <rdfs:label>reportDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/riskName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.representacionconocimientopec2.org/riskName">
+        <rdfs:domain rdf:resource="http://www.representacionconocimientopec2.org/Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the name of a Risk.</rdfs:comment>
+        <rdfs:label>riskName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/ActionStatus -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/ActionStatus">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/CorrectiveAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/ActiveDevice -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/ActiveDevice">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/MedicalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/CompetentAuthority -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/CompetentAuthority">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/CorrectiveAction -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/CorrectiveAction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.representacionconocimientopec2.org/isCorrectiveActionFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/CriticalRisk -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/CriticalRisk">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Device -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.representacionconocimientopec2.org/hasManufacturer"/>
+                <owl:someValuesFrom rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.representacionconocimientopec2.org/hasRiskClass"/>
+                <owl:someValuesFrom rdf:resource="http://www.representacionconocimientopec2.org/RiskClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/DeviceType -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/DeviceType"/>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/HighRiskDevice -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/HighRiskDevice">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/MedicalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/IVDRDevice -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/IVDRDevice">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/ImplantableDevice -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/ImplantableDevice">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/MedicalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Incident -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/Incident">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.representacionconocimientopec2.org/hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.representacionconocimientopec2.org/Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.representacionconocimientopec2.org/involvesDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/IncidentType -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/IncidentType">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/MDRDevice -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/MDRDevice">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/MedicalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Manufacturer -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/Manufacturer"/>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/MedicalDevice -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/MedicalDevice">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/ProbabilityLevel -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/ProbabilityLevel"/>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/RegulatoryFramework -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/RegulatoryFramework"/>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/RequiresMonitoring -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/RequiresMonitoring">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/ReusableDevice -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/ReusableDevice">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/MedicalDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Risk -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/Risk">
+        <rdfs:seeAlso>rdfs:seeAlso → https://dbpedia.org/page/Risk</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/RiskClass -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/RiskClass"/>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/SeriousIncident -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/SeriousIncident">
+        <rdfs:subClassOf rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/SeverityLevel -->
+
+
+    <owl:Class rdf:about="http://www.representacionconocimientopec2.org/SeverityLevel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+        <country>Germany</country>
+        <manufacturerName>Abbott Medical Devices</manufacturerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <hasManufacturer rdf:resource="http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001"/>
+        <deviceId>DEV-001</deviceId>
+        <deviceName>HeartMate 3 LVAD</deviceName>
+        <deviceType>ImplantableActiveDevice</deviceType>
+        <intendedPurpose>Ventricular assist device for end-stage heart failure</intendedPurpose>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Incident_INC001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/Incident_INC001">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <involvesDevice rdf:resource="http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001"/>
+        <incidentId>INC-001</incidentId>
+        <reportDate>2023-03-15T09:30:00</reportDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Incident_INC002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/Incident_INC002">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+        <involvesDevice rdf:resource="http://www.representacionconocimientopec2.org/MicraAV_DEV002"/>
+        <incidentId>INC-002</incidentId>
+        <reportDate>2023-04-10T14:20:00</reportDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+        <country>Ireland</country>
+        <manufacturerName>Medronic plc</manufacturerName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/MicraAV_DEV002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/MicraAV_DEV002">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+        <hasManufacturer rdf:resource="http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001"/>
+        <deviceId>DEV-002</deviceId>
+        <deviceName>Micra AV Transcatheter Pacing System</deviceName>
+        <deviceType>ActiveImplant</deviceType>
+        <intendedPurpose>Leadless cardiac pacemaker for atrioventricular synchrony</intendedPurpose>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/PacinFailureRisk_R002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/PacinFailureRisk_R002">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/Risk"/>
+        <hasRisk rdf:resource="http://www.representacionconocimientopec2.org/Incident_INC002"/>
+        <riskName>Pacing Failure</riskName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/PumpFailureRisk_R001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/PumpFailureRisk_R001">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/Risk"/>
+        <hasRisk rdf:resource="http://www.representacionconocimientopec2.org/PumpFailureRisk_R001"/>
+        <riskName>Pump Failure</riskName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/Recall_Action_001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/Recall_Action_001">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/CorrectiveAction"/>
+        <isCorrectiveActionFor rdf:resource="http://www.representacionconocimientopec2.org/Incident_INC001"/>
+        <actionType>Recall</actionType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002">
+        <rdf:type rdf:resource="http://www.representacionconocimientopec2.org/CorrectiveAction"/>
+        <isCorrectiveActionFor rdf:resource="http://www.representacionconocimientopec2.org/Incident_INC002"/>
+        <actionType>Software Update</actionType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.representacionconocimientopec2.org//c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.representacionconocimientopec2.org//i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.representacionconocimientopec2.org//d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.representacionconocimientopec2.org//m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer)</rdfs:comment>
+        <rdfs:label>Regla2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+                        <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.representacionconocimientopec2.org/hasManufacturer"/>
+                                <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//d"/>
+                                <swrl:argument2 rdf:resource="http://www.representacionconocimientopec2.org//m"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.representacionconocimientopec2.org/Manufacturer"/>
+                        <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//m"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device</rdfs:comment>
+        <rdfs:label>Regla1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+                        <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.representacionconocimientopec2.org/involvesDevice"/>
+                                <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//i"/>
+                                <swrl:argument2 rdf:resource="http://www.representacionconocimientopec2.org//d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.representacionconocimientopec2.org/Device"/>
+                        <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident.</rdfs:comment>
+        <rdfs:label>Regla3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.representacionconocimientopec2.org/CorrectiveAction"/>
+                        <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.representacionconocimientopec2.org/isCorrectiveActionFor"/>
+                                <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//c"/>
+                                <swrl:argument2 rdf:resource="http://www.representacionconocimientopec2.org//i"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.representacionconocimientopec2.org/Incident"/>
+                        <swrl:argument1 rdf:resource="http://www.representacionconocimientopec2.org//i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

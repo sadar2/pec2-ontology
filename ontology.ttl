@@ -1,0 +1,485 @@
+@prefix : <http://www.representacionconocimientopec2.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.representacionconocimientopec2.org/> .
+
+<http://www.representacionconocimientopec2.org/> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.representacionconocimientopec2.org/hasCorrectiveAction
+:hasCorrectiveAction rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :isCorrectiveActionFor ;
+                     rdfs:domain :Incident ;
+                     rdfs:range :CorrectiveAction ;
+                     rdfs:comment "Relates an Incident to a CorrectiveAction." ;
+                     rdfs:label "hasCorrectiveAction" .
+
+
+###  http://www.representacionconocimientopec2.org/hasManufacturer
+:hasManufacturer rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :manufactures ;
+                 rdfs:domain :Device ;
+                 rdfs:range :Manufacturer ;
+                 rdfs:comment "Relates a Device to it's Manufacturer." ;
+                 rdfs:label "hasManuFacturer" .
+
+
+###  http://www.representacionconocimientopec2.org/hasRisk
+:hasRisk rdf:type owl:ObjectProperty ;
+         rdfs:domain :Incident ;
+         rdfs:range :Risk ;
+         rdfs:comment "Relates an Incented to a Risk." ;
+         rdfs:label "hasRisk" .
+
+
+###  http://www.representacionconocimientopec2.org/hasRiskClass
+:hasRiskClass rdf:type owl:ObjectProperty ;
+              rdfs:domain :Device ;
+              rdfs:range :RiskClass ;
+              rdfs:comment "Relates a Device to a RiskClass." ;
+              rdfs:label "hasRiskClass" .
+
+
+###  http://www.representacionconocimientopec2.org/involvesDevice
+:involvesDevice rdf:type owl:ObjectProperty ;
+                rdfs:domain :Incident ;
+                rdfs:range :Device ;
+                rdfs:comment "Relates an Incident to a Device." ;
+                rdfs:label "involvesDevice" .
+
+
+###  http://www.representacionconocimientopec2.org/isCorrectiveActionFor
+:isCorrectiveActionFor rdf:type owl:ObjectProperty ,
+                                owl:InverseFunctionalProperty ;
+                       rdfs:domain :CorrectiveAction ;
+                       rdfs:range :Incident ;
+                       rdfs:comment "Relates a CorrectiveAction to the Incident it addresses." ;
+                       rdfs:label "isCorrectiveActionFor" .
+
+
+###  http://www.representacionconocimientopec2.org/manufactures
+:manufactures rdf:type owl:ObjectProperty ,
+                       owl:InverseFunctionalProperty ;
+              rdfs:domain :Manufacturer ;
+              rdfs:range :Device ;
+              rdfs:comment "Relates a Manufacturer to the Devices it produces." ;
+              rdfs:label "manufactures" .
+
+
+###  http://www.representacionconocimientopec2.org/reportedBy
+:reportedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Incident ;
+            rdfs:range :Manufacturer ;
+            rdfs:comment "Relates an Incident to a Manufacturer." ;
+            rdfs:label "reportedBy" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.representacionconocimientopec2.org/actionType
+:actionType rdf:type owl:DatatypeProperty ;
+            rdfs:domain :CorrectiveAction ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Stores the type of a CorrectiveAction." ;
+            rdfs:label "actionType" .
+
+
+###  http://www.representacionconocimientopec2.org/country
+:country rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Manufacturer ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Stores the country of a Manufacturer." ;
+         rdfs:label "country" .
+
+
+###  http://www.representacionconocimientopec2.org/deviceId
+:deviceId rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Device ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Stores the identifier of a Device." ;
+          rdfs:label "deviceId" .
+
+
+###  http://www.representacionconocimientopec2.org/deviceName
+:deviceName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Device ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Stores the name of a Device." ;
+            rdfs:label "deviceName" .
+
+
+###  http://www.representacionconocimientopec2.org/deviceType
+:deviceType rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Device ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Stores the type of a Device as a controlled literal value." ;
+            rdfs:label "deviceType" .
+
+
+###  http://www.representacionconocimientopec2.org/incidentId
+:incidentId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Incident ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "Stores the identifier of an Incident." ;
+            rdfs:label "incidentId" .
+
+
+###  http://www.representacionconocimientopec2.org/intendedPurpose
+:intendedPurpose rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Device ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Stores the intended purpose of a Device." ;
+                 rdfs:label "intendedPurpose" .
+
+
+###  http://www.representacionconocimientopec2.org/manufacturerName
+:manufacturerName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Manufacturer ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Stores the name of a Manufacturer." ;
+                  rdfs:label "manufacturerName" .
+
+
+###  http://www.representacionconocimientopec2.org/reportDate
+:reportDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Incident ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "Stores the report date of an Incident." ;
+            rdfs:label "reportDate" .
+
+
+###  http://www.representacionconocimientopec2.org/riskName
+:riskName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Risk ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Stores the name of a Risk." ;
+          rdfs:label "riskName" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.representacionconocimientopec2.org/ActionStatus
+:ActionStatus rdf:type owl:Class ;
+              rdfs:subClassOf :CorrectiveAction .
+
+
+###  http://www.representacionconocimientopec2.org/ActiveDevice
+:ActiveDevice rdf:type owl:Class ;
+              rdfs:subClassOf :MedicalDevice .
+
+
+###  http://www.representacionconocimientopec2.org/CompetentAuthority
+:CompetentAuthority rdf:type owl:Class ;
+                    rdfs:subClassOf :Manufacturer .
+
+
+###  http://www.representacionconocimientopec2.org/CorrectiveAction
+:CorrectiveAction rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isCorrectiveActionFor ;
+                                    owl:someValuesFrom :Incident
+                                  ] .
+
+
+###  http://www.representacionconocimientopec2.org/CriticalRisk
+:CriticalRisk rdf:type owl:Class ;
+              rdfs:subClassOf :Risk .
+
+
+###  http://www.representacionconocimientopec2.org/Device
+:Device rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasManufacturer ;
+                          owl:someValuesFrom :Manufacturer
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasRiskClass ;
+                          owl:someValuesFrom :RiskClass
+                        ] .
+
+
+###  http://www.representacionconocimientopec2.org/DeviceType
+:DeviceType rdf:type owl:Class .
+
+
+###  http://www.representacionconocimientopec2.org/HighRiskDevice
+:HighRiskDevice rdf:type owl:Class ;
+                rdfs:subClassOf :MedicalDevice .
+
+
+###  http://www.representacionconocimientopec2.org/IVDRDevice
+:IVDRDevice rdf:type owl:Class ;
+            rdfs:subClassOf :InVitroDiagnosticDevice .
+
+
+###  http://www.representacionconocimientopec2.org/ImplantableDevice
+:ImplantableDevice rdf:type owl:Class ;
+                   rdfs:subClassOf :MedicalDevice .
+
+
+###  http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice
+:InVitroDiagnosticDevice rdf:type owl:Class ;
+                         rdfs:subClassOf :Device .
+
+
+###  http://www.representacionconocimientopec2.org/Incident
+:Incident rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasRisk ;
+                            owl:someValuesFrom :Risk
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :involvesDevice ;
+                            owl:someValuesFrom :Device
+                          ] .
+
+
+###  http://www.representacionconocimientopec2.org/IncidentType
+:IncidentType rdf:type owl:Class ;
+              rdfs:subClassOf :Incident .
+
+
+###  http://www.representacionconocimientopec2.org/MDRDevice
+:MDRDevice rdf:type owl:Class ;
+           rdfs:subClassOf :MedicalDevice .
+
+
+###  http://www.representacionconocimientopec2.org/Manufacturer
+:Manufacturer rdf:type owl:Class .
+
+
+###  http://www.representacionconocimientopec2.org/MedicalDevice
+:MedicalDevice rdf:type owl:Class ;
+               rdfs:subClassOf :Device .
+
+
+###  http://www.representacionconocimientopec2.org/ProbabilityLevel
+:ProbabilityLevel rdf:type owl:Class .
+
+
+###  http://www.representacionconocimientopec2.org/RegulatoryFramework
+:RegulatoryFramework rdf:type owl:Class .
+
+
+###  http://www.representacionconocimientopec2.org/RequiresMonitoring
+:RequiresMonitoring rdf:type owl:Class ;
+                    rdfs:subClassOf :Device .
+
+
+###  http://www.representacionconocimientopec2.org/ReusableDevice
+:ReusableDevice rdf:type owl:Class ;
+                rdfs:subClassOf :MedicalDevice .
+
+
+###  http://www.representacionconocimientopec2.org/Risk
+:Risk rdf:type owl:Class ;
+      rdfs:seeAlso "rdfs:seeAlso → https://dbpedia.org/page/Risk" .
+
+
+###  http://www.representacionconocimientopec2.org/RiskClass
+:RiskClass rdf:type owl:Class .
+
+
+###  http://www.representacionconocimientopec2.org/SeriousIncident
+:SeriousIncident rdf:type owl:Class ;
+                 rdfs:subClassOf :Incident .
+
+
+###  http://www.representacionconocimientopec2.org/SeverityLevel
+:SeverityLevel rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002
+:Abbott_Medical_Devices_MAN002 rdf:type owl:NamedIndividual ,
+                                        :Manufacturer ;
+                               :country "Germany" ;
+                               :manufacturerName "Abbott Medical Devices" .
+
+
+###  http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001
+:HeartMate3LVAD_DEV001 rdf:type owl:NamedIndividual ,
+                                :Device ;
+                       :hasManufacturer :Medtronic_plc_MAN001 ;
+                       :deviceId "DEV-001" ;
+                       :deviceName "HeartMate 3 LVAD" ;
+                       :deviceType "ImplantableActiveDevice" ;
+                       :intendedPurpose "Ventricular assist device for end-stage heart failure" .
+
+
+###  http://www.representacionconocimientopec2.org/Incident_INC001
+:Incident_INC001 rdf:type owl:NamedIndividual ,
+                          :Incident ;
+                 :involvesDevice :HeartMate3LVAD_DEV001 ;
+                 :incidentId "INC-001" ;
+                 :reportDate "2023-03-15T09:30:00" .
+
+
+###  http://www.representacionconocimientopec2.org/Incident_INC002
+:Incident_INC002 rdf:type owl:NamedIndividual ,
+                          :Incident ;
+                 :involvesDevice :MicraAV_DEV002 ;
+                 :incidentId "INC-002" ;
+                 :reportDate "2023-04-10T14:20:00" .
+
+
+###  http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001
+:Medtronic_plc_MAN001 rdf:type owl:NamedIndividual ,
+                               :Manufacturer ;
+                      :country "Ireland" ;
+                      :manufacturerName "Medronic plc" .
+
+
+###  http://www.representacionconocimientopec2.org/MicraAV_DEV002
+:MicraAV_DEV002 rdf:type owl:NamedIndividual ,
+                         :Device ;
+                :hasManufacturer :Medtronic_plc_MAN001 ;
+                :deviceId "DEV-002" ;
+                :deviceName "Micra AV Transcatheter Pacing System" ;
+                :deviceType "ActiveImplant" ;
+                :intendedPurpose "Leadless cardiac pacemaker for atrioventricular synchrony" .
+
+
+###  http://www.representacionconocimientopec2.org/PacinFailureRisk_R002
+:PacinFailureRisk_R002 rdf:type owl:NamedIndividual ,
+                                :Risk ;
+                       :hasRisk :Incident_INC002 ;
+                       :riskName "Pacing Failure" .
+
+
+###  http://www.representacionconocimientopec2.org/PumpFailureRisk_R001
+:PumpFailureRisk_R001 rdf:type owl:NamedIndividual ,
+                               :Risk ;
+                      :hasRisk :PumpFailureRisk_R001 ;
+                      :riskName "Pump Failure" .
+
+
+###  http://www.representacionconocimientopec2.org/Recall_Action_001
+:Recall_Action_001 rdf:type owl:NamedIndividual ,
+                            :CorrectiveAction ;
+                   :isCorrectiveActionFor :Incident_INC001 ;
+                   :actionType "Recall" .
+
+
+###  http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002
+:SoftwareUpdate_CA002 rdf:type owl:NamedIndividual ,
+                               :CorrectiveAction ;
+                      :isCorrectiveActionFor :Incident_INC002 ;
+                      :actionType "Software Update" .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.representacionconocimientopec2.org//c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.representacionconocimientopec2.org//i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.representacionconocimientopec2.org//d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.representacionconocimientopec2.org//m> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer)" ;
+   rdfs:label "Regla2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasManufacturer ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//m>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Manufacturer ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//m>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device" ;
+   rdfs:label "Regla1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :involvesDevice ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//d>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident." ;
+   rdfs:label "Regla3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CorrectiveAction ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCorrectiveActionFor ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//i>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

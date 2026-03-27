@@ -1,0 +1,443 @@
+<http://www.representacionconocimientopec2.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.representacionconocimientopec2.org/hasCorrectiveAction
+<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> .
+<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
+<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to a CorrectiveAction." .
+<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "hasCorrectiveAction" .
+# 
+# http://www.representacionconocimientopec2.org/hasManufacturer
+<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.representacionconocimientopec2.org/manufactures> .
+<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Manufacturer> .
+<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Device to it's Manufacturer." .
+<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "hasManuFacturer" .
+# 
+# http://www.representacionconocimientopec2.org/hasRisk
+<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Risk> .
+<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incented to a Risk." .
+<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "hasRisk" .
+# 
+# http://www.representacionconocimientopec2.org/hasRiskClass
+<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/RiskClass> .
+<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Device to a RiskClass." .
+<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "hasRiskClass" .
+# 
+# http://www.representacionconocimientopec2.org/involvesDevice
+<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to a Device." .
+<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "involvesDevice" .
+# 
+# http://www.representacionconocimientopec2.org/isCorrectiveActionFor
+<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
+<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a CorrectiveAction to the Incident it addresses." .
+<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#label> "isCorrectiveActionFor" .
+# 
+# http://www.representacionconocimientopec2.org/manufactures
+<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Manufacturer> .
+<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Manufacturer to the Devices it produces." .
+<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/2000/01/rdf-schema#label> "manufactures" .
+# 
+# http://www.representacionconocimientopec2.org/reportedBy
+<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Manufacturer> .
+<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to a Manufacturer." .
+<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reportedBy" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.representacionconocimientopec2.org/actionType
+<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
+<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the type of a CorrectiveAction." .
+<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/2000/01/rdf-schema#label> "actionType" .
+# 
+# http://www.representacionconocimientopec2.org/country
+<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Manufacturer> .
+<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the country of a Manufacturer." .
+<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/2000/01/rdf-schema#label> "country" .
+# 
+# http://www.representacionconocimientopec2.org/deviceId
+<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the identifier of a Device." .
+<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/2000/01/rdf-schema#label> "deviceId" .
+# 
+# http://www.representacionconocimientopec2.org/deviceName
+<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Device." .
+<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/2000/01/rdf-schema#label> "deviceName" .
+# 
+# http://www.representacionconocimientopec2.org/deviceType
+<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the type of a Device as a controlled literal value." .
+<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/2000/01/rdf-schema#label> "deviceType" .
+# 
+# http://www.representacionconocimientopec2.org/incidentId
+<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the identifier of an Incident." .
+<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/2000/01/rdf-schema#label> "incidentId" .
+# 
+# http://www.representacionconocimientopec2.org/intendedPurpose
+<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the intended purpose of a Device." .
+<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "intendedPurpose" .
+# 
+# http://www.representacionconocimientopec2.org/manufacturerName
+<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Manufacturer> .
+<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Manufacturer." .
+<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturerName" .
+# 
+# http://www.representacionconocimientopec2.org/reportDate
+<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the report date of an Incident." .
+<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/2000/01/rdf-schema#label> "reportDate" .
+# 
+# http://www.representacionconocimientopec2.org/riskName
+<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Risk> .
+<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Risk." .
+<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/2000/01/rdf-schema#label> "riskName" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.representacionconocimientopec2.org/ActionStatus
+<http://www.representacionconocimientopec2.org/ActionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/ActionStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
+# 
+# http://www.representacionconocimientopec2.org/ActiveDevice
+<http://www.representacionconocimientopec2.org/ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# 
+# http://www.representacionconocimientopec2.org/CompetentAuthority
+<http://www.representacionconocimientopec2.org/CompetentAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/CompetentAuthority> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Manufacturer> .
+# 
+# http://www.representacionconocimientopec2.org/CorrectiveAction
+<http://www.representacionconocimientopec2.org/CorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/Incident> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.representacionconocimientopec2.org/CriticalRisk
+<http://www.representacionconocimientopec2.org/CriticalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/CriticalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Risk> .
+# 
+# http://www.representacionconocimientopec2.org/Device
+<http://www.representacionconocimientopec2.org/Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/Manufacturer> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/hasManufacturer> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.representacionconocimientopec2.org/Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/RiskClass> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/hasRiskClass> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.representacionconocimientopec2.org/DeviceType
+<http://www.representacionconocimientopec2.org/DeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.representacionconocimientopec2.org/HighRiskDevice
+<http://www.representacionconocimientopec2.org/HighRiskDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# 
+# http://www.representacionconocimientopec2.org/IVDRDevice
+<http://www.representacionconocimientopec2.org/IVDRDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/IVDRDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice> .
+# 
+# http://www.representacionconocimientopec2.org/ImplantableDevice
+<http://www.representacionconocimientopec2.org/ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# 
+# http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice
+<http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Device> .
+# 
+# http://www.representacionconocimientopec2.org/Incident
+<http://www.representacionconocimientopec2.org/Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/Risk> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/hasRisk> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.representacionconocimientopec2.org/Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/Device> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/involvesDevice> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://www.representacionconocimientopec2.org/IncidentType
+<http://www.representacionconocimientopec2.org/IncidentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/IncidentType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Incident> .
+# 
+# http://www.representacionconocimientopec2.org/MDRDevice
+<http://www.representacionconocimientopec2.org/MDRDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/MDRDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# 
+# http://www.representacionconocimientopec2.org/Manufacturer
+<http://www.representacionconocimientopec2.org/Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.representacionconocimientopec2.org/MedicalDevice
+<http://www.representacionconocimientopec2.org/MedicalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Device> .
+# 
+# http://www.representacionconocimientopec2.org/ProbabilityLevel
+<http://www.representacionconocimientopec2.org/ProbabilityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.representacionconocimientopec2.org/RegulatoryFramework
+<http://www.representacionconocimientopec2.org/RegulatoryFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.representacionconocimientopec2.org/RequiresMonitoring
+<http://www.representacionconocimientopec2.org/RequiresMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/RequiresMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Device> .
+# 
+# http://www.representacionconocimientopec2.org/ReusableDevice
+<http://www.representacionconocimientopec2.org/ReusableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/ReusableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# 
+# http://www.representacionconocimientopec2.org/Risk
+<http://www.representacionconocimientopec2.org/Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/Risk> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "rdfs:seeAlso → https://dbpedia.org/page/Risk" .
+# 
+# http://www.representacionconocimientopec2.org/RiskClass
+<http://www.representacionconocimientopec2.org/RiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.representacionconocimientopec2.org/SeriousIncident
+<http://www.representacionconocimientopec2.org/SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.representacionconocimientopec2.org/SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Incident> .
+# 
+# http://www.representacionconocimientopec2.org/SeverityLevel
+<http://www.representacionconocimientopec2.org/SeverityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002
+<http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Manufacturer> .
+<http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002> <http://www.representacionconocimientopec2.org/country> "Germany" .
+<http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002> <http://www.representacionconocimientopec2.org/manufacturerName> "Abbott Medical Devices" .
+# 
+# http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001
+<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> .
+<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/deviceId> "DEV-001" .
+<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/deviceName> "HeartMate 3 LVAD" .
+<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/deviceType> "ImplantableActiveDevice" .
+<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/intendedPurpose> "Ventricular assist device for end-stage heart failure" .
+# 
+# http://www.representacionconocimientopec2.org/Incident_INC001
+<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.representacionconocimientopec2.org/involvesDevice> <http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> .
+<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.representacionconocimientopec2.org/incidentId> "INC-001" .
+<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.representacionconocimientopec2.org/reportDate> "2023-03-15T09:30:00" .
+# 
+# http://www.representacionconocimientopec2.org/Incident_INC002
+<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Incident> .
+<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.representacionconocimientopec2.org/involvesDevice> <http://www.representacionconocimientopec2.org/MicraAV_DEV002> .
+<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.representacionconocimientopec2.org/incidentId> "INC-002" .
+<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.representacionconocimientopec2.org/reportDate> "2023-04-10T14:20:00" .
+# 
+# http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001
+<http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Manufacturer> .
+<http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> <http://www.representacionconocimientopec2.org/country> "Ireland" .
+<http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> <http://www.representacionconocimientopec2.org/manufacturerName> "Medronic plc" .
+# 
+# http://www.representacionconocimientopec2.org/MicraAV_DEV002
+<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Device> .
+<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> .
+<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/deviceId> "DEV-002" .
+<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/deviceName> "Micra AV Transcatheter Pacing System" .
+<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/deviceType> "ActiveImplant" .
+<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/intendedPurpose> "Leadless cardiac pacemaker for atrioventricular synchrony" .
+# 
+# http://www.representacionconocimientopec2.org/PacinFailureRisk_R002
+<http://www.representacionconocimientopec2.org/PacinFailureRisk_R002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/PacinFailureRisk_R002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Risk> .
+<http://www.representacionconocimientopec2.org/PacinFailureRisk_R002> <http://www.representacionconocimientopec2.org/hasRisk> <http://www.representacionconocimientopec2.org/Incident_INC002> .
+<http://www.representacionconocimientopec2.org/PacinFailureRisk_R002> <http://www.representacionconocimientopec2.org/riskName> "Pacing Failure" .
+# 
+# http://www.representacionconocimientopec2.org/PumpFailureRisk_R001
+<http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Risk> .
+<http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> <http://www.representacionconocimientopec2.org/hasRisk> <http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> .
+<http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> <http://www.representacionconocimientopec2.org/riskName> "Pump Failure" .
+# 
+# http://www.representacionconocimientopec2.org/Recall_Action_001
+<http://www.representacionconocimientopec2.org/Recall_Action_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/Recall_Action_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
+<http://www.representacionconocimientopec2.org/Recall_Action_001> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.representacionconocimientopec2.org/Incident_INC001> .
+<http://www.representacionconocimientopec2.org/Recall_Action_001> <http://www.representacionconocimientopec2.org/actionType> "Recall" .
+# 
+# http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002
+<http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
+<http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.representacionconocimientopec2.org/Incident_INC002> .
+<http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002> <http://www.representacionconocimientopec2.org/actionType> "Software Update" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.representacionconocimientopec2.org//c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.representacionconocimientopec2.org//i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.representacionconocimientopec2.org//d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.representacionconocimientopec2.org//m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid13 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#comment> "si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer)" .
+_:genid13 <http://www.w3.org/2000/01/rdf-schema#label> "Regla2" .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid13 <http://www.w3.org/2003/11/swrl#body> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//m> .
+_:genid15 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d> .
+_:genid15 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.representacionconocimientopec2.org/hasManufacturer> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
+_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d> .
+_:genid17 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Device> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid13 <http://www.w3.org/2003/11/swrl#head> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//m> .
+_:genid19 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Manufacturer> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#comment> "si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device" .
+_:genid20 <http://www.w3.org/2000/01/rdf-schema#label> "Regla1" .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid20 <http://www.w3.org/2003/11/swrl#body> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//d> .
+_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i> .
+_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.representacionconocimientopec2.org/involvesDevice> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i> .
+_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Incident> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid20 <http://www.w3.org/2003/11/swrl#head> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d> .
+_:genid26 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Device> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#comment> "si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident." .
+_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Regla3" .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid6 <http://www.w3.org/2003/11/swrl#body> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//i> .
+_:genid8 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//c> .
+_:genid8 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//c> .
+_:genid10 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/2003/11/swrl#head> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i> .
+_:genid12 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Incident> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
