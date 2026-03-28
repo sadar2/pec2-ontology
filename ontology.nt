@@ -1,4 +1,7 @@
-<http://www.representacionconocimientopec2.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/sadar/pec2#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/sadar/pec2#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology models medical devices, incidents, risks and corrective actions to support risk management and safety analysis." .
+<http://www.semanticweb.org/sadar/pec2#> <http://www.w3.org/2000/01/rdf-schema#comment> "https://creativecommons.org/licenses/by/4.0/" .
+<http://www.semanticweb.org/sadar/pec2#> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Device Risk Management Ontology" .
 # 
 # 
 # #################################################################
@@ -20,65 +23,115 @@
 # #################################################################
 # 
 # 
-# http://www.representacionconocimientopec2.org/hasCorrectiveAction
-<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> .
-<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
-<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to a CorrectiveAction." .
-<http://www.representacionconocimientopec2.org/hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "hasCorrectiveAction" .
+# http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction
+<http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> .
+<http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Incident> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#range> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to a CorrectiveAction applied to it." .
+<http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "hasCorrectiveAction" .
 # 
-# http://www.representacionconocimientopec2.org/hasManufacturer
-<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.representacionconocimientopec2.org/manufactures> .
-<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Manufacturer> .
-<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Device to it's Manufacturer." .
-<http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "hasManuFacturer" .
+# http://www.semanticweb.org/sadar/pec2##hasManufacturer
+<http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/sadar/pec2##manufactures> .
+<http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Device> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Device to its Manufacturer." .
+<http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "hasManufacturer" .
 # 
-# http://www.representacionconocimientopec2.org/hasRisk
-<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Risk> .
-<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incented to a Risk." .
-<http://www.representacionconocimientopec2.org/hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "hasRisk" .
+# http://www.semanticweb.org/sadar/pec2##hasRisk
+<http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Incident> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Risk> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to an identified Risk." .
+<http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "hasRisk" .
 # 
-# http://www.representacionconocimientopec2.org/hasRiskClass
-<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/RiskClass> .
-<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Device to a RiskClass." .
-<http://www.representacionconocimientopec2.org/hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "hasRiskClass" .
+# http://www.semanticweb.org/sadar/pec2##hasRiskClass
+<http://www.semanticweb.org/sadar/pec2##hasRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Device> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#range> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##RiskClass> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Device to its RiskClass." .
+<http://www.semanticweb.org/sadar/pec2##hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "hasRiskClass" .
 # 
-# http://www.representacionconocimientopec2.org/involvesDevice
-<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to a Device." .
-<http://www.representacionconocimientopec2.org/involvesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "involvesDevice" .
+# http://www.semanticweb.org/sadar/pec2##involvesDevice
+<http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Incident> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Device> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to the Device involved in it." .
+<http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "involvesDevice" .
 # 
-# http://www.representacionconocimientopec2.org/isCorrectiveActionFor
-<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
-<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
-<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a CorrectiveAction to the Incident it addresses." .
-<http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#label> "isCorrectiveActionFor" .
+# http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor
+<http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#range> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Incident> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a CorrectiveAction to the Incident it addresses." .
+<http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.w3.org/2000/01/rdf-schema#label> "isCorrectiveActionFor" .
 # 
-# http://www.representacionconocimientopec2.org/manufactures
-<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
-<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Manufacturer> .
-<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Manufacturer to the Devices it produces." .
-<http://www.representacionconocimientopec2.org/manufactures> <http://www.w3.org/2000/01/rdf-schema#label> "manufactures" .
+# http://www.semanticweb.org/sadar/pec2##manufactures
+<http://www.semanticweb.org/sadar/pec2##manufactures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##manufactures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://www.semanticweb.org/sadar/pec2##manufactures> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##manufactures> <http://www.w3.org/2000/01/rdf-schema#range> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Device> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##manufactures> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Manufacturer to the Devices it produces." .
+<http://www.semanticweb.org/sadar/pec2##manufactures> <http://www.w3.org/2000/01/rdf-schema#label> "manufactures" .
 # 
-# http://www.representacionconocimientopec2.org/reportedBy
-<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.representacionconocimientopec2.org/Manufacturer> .
-<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to a Manufacturer." .
-<http://www.representacionconocimientopec2.org/reportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reportedBy" .
+# http://www.semanticweb.org/sadar/pec2##reportedBy
+<http://www.semanticweb.org/sadar/pec2##reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/sadar/pec2##reportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Incident> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##reportedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##reportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Incident to the Manufacturer that reported it." .
+<http://www.semanticweb.org/sadar/pec2##reportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reportedBy" .
 # 
 # 
 # 
@@ -89,75 +142,79 @@
 # #################################################################
 # 
 # 
-# http://www.representacionconocimientopec2.org/actionType
-<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
-<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the type of a CorrectiveAction." .
-<http://www.representacionconocimientopec2.org/actionType> <http://www.w3.org/2000/01/rdf-schema#label> "actionType" .
+# http://www.semanticweb.org/sadar/pec2##actionType
+<http://www.semanticweb.org/sadar/pec2##actionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##actionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> .
+<http://www.semanticweb.org/sadar/pec2##actionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##actionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the type of a CorrectiveAction." .
+<http://www.semanticweb.org/sadar/pec2##actionType> <http://www.w3.org/2000/01/rdf-schema#label> "actionType" .
 # 
-# http://www.representacionconocimientopec2.org/country
-<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Manufacturer> .
-<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the country of a Manufacturer." .
-<http://www.representacionconocimientopec2.org/country> <http://www.w3.org/2000/01/rdf-schema#label> "country" .
+# http://www.semanticweb.org/sadar/pec2##deviceId
+<http://www.semanticweb.org/sadar/pec2##deviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##deviceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+<http://www.semanticweb.org/sadar/pec2##deviceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##deviceId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the country of a Manufacturer." .
+<http://www.semanticweb.org/sadar/pec2##deviceId> <http://www.w3.org/2000/01/rdf-schema#label> "country" .
 # 
-# http://www.representacionconocimientopec2.org/deviceId
-<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the identifier of a Device." .
-<http://www.representacionconocimientopec2.org/deviceId> <http://www.w3.org/2000/01/rdf-schema#label> "deviceId" .
+# http://www.semanticweb.org/sadar/pec2##deviceIdentifier
+<http://www.semanticweb.org/sadar/pec2##deviceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##RiskClass> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasRiskClass> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the identifier of a Device." .
+<http://www.semanticweb.org/sadar/pec2##deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "deviceIdentifier" .
 # 
-# http://www.representacionconocimientopec2.org/deviceName
-<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Device." .
-<http://www.representacionconocimientopec2.org/deviceName> <http://www.w3.org/2000/01/rdf-schema#label> "deviceName" .
+# http://www.semanticweb.org/sadar/pec2##deviceName
+<http://www.semanticweb.org/sadar/pec2##deviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##deviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##deviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##deviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Device." .
+<http://www.semanticweb.org/sadar/pec2##deviceName> <http://www.w3.org/2000/01/rdf-schema#label> "deviceName" .
 # 
-# http://www.representacionconocimientopec2.org/deviceType
-<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the type of a Device as a controlled literal value." .
-<http://www.representacionconocimientopec2.org/deviceType> <http://www.w3.org/2000/01/rdf-schema#label> "deviceType" .
+# http://www.semanticweb.org/sadar/pec2##deviceType
+<http://www.semanticweb.org/sadar/pec2##deviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##deviceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##deviceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##deviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the type of a Device as a controlled literal value." .
+<http://www.semanticweb.org/sadar/pec2##deviceType> <http://www.w3.org/2000/01/rdf-schema#label> "deviceType" .
 # 
-# http://www.representacionconocimientopec2.org/incidentId
-<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the identifier of an Incident." .
-<http://www.representacionconocimientopec2.org/incidentId> <http://www.w3.org/2000/01/rdf-schema#label> "incidentId" .
+# http://www.semanticweb.org/sadar/pec2##incidentId
+<http://www.semanticweb.org/sadar/pec2##incidentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##incidentId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Incident> .
+<http://www.semanticweb.org/sadar/pec2##incidentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##incidentId> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the identifier of an Incident." .
+<http://www.semanticweb.org/sadar/pec2##incidentId> <http://www.w3.org/2000/01/rdf-schema#label> "incidentId" .
 # 
-# http://www.representacionconocimientopec2.org/intendedPurpose
-<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the intended purpose of a Device." .
-<http://www.representacionconocimientopec2.org/intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "intendedPurpose" .
+# http://www.semanticweb.org/sadar/pec2##intendedPurpose
+<http://www.semanticweb.org/sadar/pec2##intendedPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the intended purpose of a Device." .
+<http://www.semanticweb.org/sadar/pec2##intendedPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "intendedPurpose" .
 # 
-# http://www.representacionconocimientopec2.org/manufacturerName
-<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Manufacturer> .
-<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Manufacturer." .
-<http://www.representacionconocimientopec2.org/manufacturerName> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturerName" .
+# http://www.semanticweb.org/sadar/pec2##manufacturerName
+<http://www.semanticweb.org/sadar/pec2##manufacturerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##manufacturerName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+<http://www.semanticweb.org/sadar/pec2##manufacturerName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##manufacturerName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Manufacturer." .
+<http://www.semanticweb.org/sadar/pec2##manufacturerName> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturerName" .
 # 
-# http://www.representacionconocimientopec2.org/reportDate
-<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the report date of an Incident." .
-<http://www.representacionconocimientopec2.org/reportDate> <http://www.w3.org/2000/01/rdf-schema#label> "reportDate" .
+# http://www.semanticweb.org/sadar/pec2##reportDate
+<http://www.semanticweb.org/sadar/pec2##reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##reportDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Incident> .
+<http://www.semanticweb.org/sadar/pec2##reportDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/sadar/pec2##reportDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the report date of an Incident." .
+<http://www.semanticweb.org/sadar/pec2##reportDate> <http://www.w3.org/2000/01/rdf-schema#label> "reportDate" .
 # 
-# http://www.representacionconocimientopec2.org/riskName
-<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.representacionconocimientopec2.org/Risk> .
-<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Risk." .
-<http://www.representacionconocimientopec2.org/riskName> <http://www.w3.org/2000/01/rdf-schema#label> "riskName" .
+# http://www.semanticweb.org/sadar/pec2##riskName
+<http://www.semanticweb.org/sadar/pec2##riskName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/sadar/pec2##riskName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/sadar/pec2##Risk> .
+<http://www.semanticweb.org/sadar/pec2##riskName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/sadar/pec2##riskName> <http://www.w3.org/2000/01/rdf-schema#comment> "Stores the name of a Risk." .
+<http://www.semanticweb.org/sadar/pec2##riskName> <http://www.w3.org/2000/01/rdf-schema#label> "riskName" .
 # 
 # 
 # 
@@ -168,112 +225,153 @@
 # #################################################################
 # 
 # 
-# http://www.representacionconocimientopec2.org/ActionStatus
-<http://www.representacionconocimientopec2.org/ActionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/ActionStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
+# http://www.semanticweb.org/sadar/pec2##ActionStatus
+<http://www.semanticweb.org/sadar/pec2##ActionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##ActionStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> .
+<http://www.semanticweb.org/sadar/pec2##ActionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the status of a corrective action (e.g., pending, completed)." .
+<http://www.semanticweb.org/sadar/pec2##ActionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "ActionStatus" .
 # 
-# http://www.representacionconocimientopec2.org/ActiveDevice
-<http://www.representacionconocimientopec2.org/ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# http://www.semanticweb.org/sadar/pec2##ActiveDevice
+<http://www.semanticweb.org/sadar/pec2##ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##MedicalDevice> .
+<http://www.semanticweb.org/sadar/pec2##ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a medical device that depends on a source of energy other than that generated by the human body." .
+<http://www.semanticweb.org/sadar/pec2##ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "ActiveDevice" .
 # 
-# http://www.representacionconocimientopec2.org/CompetentAuthority
-<http://www.representacionconocimientopec2.org/CompetentAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/CompetentAuthority> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Manufacturer> .
+# http://www.semanticweb.org/sadar/pec2##CompetentAuthority
+<http://www.semanticweb.org/sadar/pec2##CompetentAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##CompetentAuthority> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+<http://www.semanticweb.org/sadar/pec2##CompetentAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an official authority responsible for regulating and supervising medical devices." .
+<http://www.semanticweb.org/sadar/pec2##CompetentAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "CompetentAuthority" .
 # 
-# http://www.representacionconocimientopec2.org/CorrectiveAction
-<http://www.representacionconocimientopec2.org/CorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/Incident> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# http://www.semanticweb.org/sadar/pec2##CorrectiveAction
+<http://www.semanticweb.org/sadar/pec2##CorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Incident> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a corrective action applied in response to an incident." .
+<http://www.semanticweb.org/sadar/pec2##CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "CorrectiveAction" .
 # 
-# http://www.representacionconocimientopec2.org/CriticalRisk
-<http://www.representacionconocimientopec2.org/CriticalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/CriticalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Risk> .
+# http://www.semanticweb.org/sadar/pec2##CriticalRisk
+<http://www.semanticweb.org/sadar/pec2##CriticalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##CriticalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##Risk> .
 # 
-# http://www.representacionconocimientopec2.org/Device
-<http://www.representacionconocimientopec2.org/Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/Manufacturer> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/hasManufacturer> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.representacionconocimientopec2.org/Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
-_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/RiskClass> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/hasRiskClass> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# http://www.semanticweb.org/sadar/pec2##Device
+<http://www.semanticweb.org/sadar/pec2##Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##Device> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a medical device or an in vitro diagnostic device." .
+<http://www.semanticweb.org/sadar/pec2##Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
 # 
-# http://www.representacionconocimientopec2.org/DeviceType
-<http://www.representacionconocimientopec2.org/DeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.semanticweb.org/sadar/pec2##DeviceType
+<http://www.semanticweb.org/sadar/pec2##DeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##DeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the regulatory risk classification of a device." .
+<http://www.semanticweb.org/sadar/pec2##DeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "DeviceType" .
 # 
-# http://www.representacionconocimientopec2.org/HighRiskDevice
-<http://www.representacionconocimientopec2.org/HighRiskDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# http://www.semanticweb.org/sadar/pec2##HighRiskDevice
+<http://www.semanticweb.org/sadar/pec2##HighRiskDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##MedicalDevice> .
+<http://www.semanticweb.org/sadar/pec2##HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a medical device classified as high risk based on regulatory criteria." .
+<http://www.semanticweb.org/sadar/pec2##HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#label> "HighRiskDevice" .
 # 
-# http://www.representacionconocimientopec2.org/IVDRDevice
-<http://www.representacionconocimientopec2.org/IVDRDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/IVDRDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice> .
+# http://www.semanticweb.org/sadar/pec2##IVDRDevice
+<http://www.semanticweb.org/sadar/pec2##IVDRDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##IVDRDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice> .
+<http://www.semanticweb.org/sadar/pec2##IVDRDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an in vitro diagnostic device regulated under the IVDR." .
+<http://www.semanticweb.org/sadar/pec2##IVDRDevice> <http://www.w3.org/2000/01/rdf-schema#label> "IVDRDevice" .
 # 
-# http://www.representacionconocimientopec2.org/ImplantableDevice
-<http://www.representacionconocimientopec2.org/ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# http://www.semanticweb.org/sadar/pec2##ImplantableDevice
+<http://www.semanticweb.org/sadar/pec2##ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##MedicalDevice> .
+<http://www.semanticweb.org/sadar/pec2##ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a medical device intended to be totally or partially introduced into the human body." .
+<http://www.semanticweb.org/sadar/pec2##ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "ImplantableDevice" .
 # 
-# http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice
-<http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Device> .
+# http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice
+<http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a device used for the in vitro examination of samples derived from the human body." .
+<http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#label> "InVitroDiagnosticDevice" .
 # 
-# http://www.representacionconocimientopec2.org/Incident
-<http://www.representacionconocimientopec2.org/Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/Risk> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/hasRisk> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.representacionconocimientopec2.org/Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.representacionconocimientopec2.org/Device> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.representacionconocimientopec2.org/involvesDevice> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# http://www.semanticweb.org/sadar/pec2##Incident
+<http://www.semanticweb.org/sadar/pec2##Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Risk> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##hasRisk> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/sadar/pec2##Device> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/sadar/pec2##involvesDevice> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/sadar/pec2##Incident> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an incident associated with a device." .
 # 
-# http://www.representacionconocimientopec2.org/IncidentType
-<http://www.representacionconocimientopec2.org/IncidentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/IncidentType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Incident> .
+# http://www.semanticweb.org/sadar/pec2##IncidentType
+<http://www.semanticweb.org/sadar/pec2##IncidentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##IncidentType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##Incident> .
+<http://www.semanticweb.org/sadar/pec2##IncidentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the classification or type of an incident." .
+<http://www.semanticweb.org/sadar/pec2##IncidentType> <http://www.w3.org/2000/01/rdf-schema#label> "IncidentType" .
 # 
-# http://www.representacionconocimientopec2.org/MDRDevice
-<http://www.representacionconocimientopec2.org/MDRDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/MDRDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# http://www.semanticweb.org/sadar/pec2##MDRDevice
+<http://www.semanticweb.org/sadar/pec2##MDRDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##MDRDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##MedicalDevice> .
+<http://www.semanticweb.org/sadar/pec2##MDRDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a medical device regulated under the Medical Device Regulation (MDR)." .
+<http://www.semanticweb.org/sadar/pec2##MDRDevice> <http://www.w3.org/2000/01/rdf-schema#label> "MDRDevice" .
 # 
-# http://www.representacionconocimientopec2.org/Manufacturer
-<http://www.representacionconocimientopec2.org/Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.semanticweb.org/sadar/pec2##Manufacturer
+<http://www.semanticweb.org/sadar/pec2##Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a manufacturer of medical devices." .
+<http://www.semanticweb.org/sadar/pec2##Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer" .
 # 
-# http://www.representacionconocimientopec2.org/MedicalDevice
-<http://www.representacionconocimientopec2.org/MedicalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Device> .
+# http://www.semanticweb.org/sadar/pec2##MedicalDevice
+<http://www.semanticweb.org/sadar/pec2##MedicalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a medical device as defined by applicable medical regulations." .
+<http://www.semanticweb.org/sadar/pec2##MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#label> "MedicalDevice" .
 # 
-# http://www.representacionconocimientopec2.org/ProbabilityLevel
-<http://www.representacionconocimientopec2.org/ProbabilityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.semanticweb.org/sadar/pec2##ProbabilityLevel
+<http://www.semanticweb.org/sadar/pec2##ProbabilityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##ProbabilityLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the probability level associated with a risk occurrence." .
+<http://www.semanticweb.org/sadar/pec2##ProbabilityLevel> <http://www.w3.org/2000/01/rdf-schema#label> "ProbabilityLevel" .
 # 
-# http://www.representacionconocimientopec2.org/RegulatoryFramework
-<http://www.representacionconocimientopec2.org/RegulatoryFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.semanticweb.org/sadar/pec2##RegulatoryFramework
+<http://www.semanticweb.org/sadar/pec2##RegulatoryFramework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the regulatory framework or legislation applicable to a medical device (e.g., MDR, IVDR)." .
+<http://www.semanticweb.org/sadar/pec2##RegulatoryFramework> <http://www.w3.org/2000/01/rdf-schema#label> "RegulatoryFramework" .
 # 
-# http://www.representacionconocimientopec2.org/RequiresMonitoring
-<http://www.representacionconocimientopec2.org/RequiresMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/RequiresMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Device> .
+# http://www.semanticweb.org/sadar/pec2##RequiresMonitoring
+<http://www.semanticweb.org/sadar/pec2##RequiresMonitoring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##RequiresMonitoring> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##RequiresMonitoring> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a device that requires continuous or periodic monitoring during its use." .
+<http://www.semanticweb.org/sadar/pec2##RequiresMonitoring> <http://www.w3.org/2000/01/rdf-schema#label> "RequiresMonitoring" .
 # 
-# http://www.representacionconocimientopec2.org/ReusableDevice
-<http://www.representacionconocimientopec2.org/ReusableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/ReusableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/MedicalDevice> .
+# http://www.semanticweb.org/sadar/pec2##ReusableDevice
+<http://www.semanticweb.org/sadar/pec2##ReusableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##ReusableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##MedicalDevice> .
+<http://www.semanticweb.org/sadar/pec2##ReusableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a medical device intended to be used multiple times." .
+<http://www.semanticweb.org/sadar/pec2##ReusableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "ReusableDevice" .
 # 
-# http://www.representacionconocimientopec2.org/Risk
-<http://www.representacionconocimientopec2.org/Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/Risk> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "rdfs:seeAlso → https://dbpedia.org/page/Risk" .
+# http://www.semanticweb.org/sadar/pec2##Risk
+<http://www.semanticweb.org/sadar/pec2##Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a risk associated with a medical device or incident." .
+<http://www.semanticweb.org/sadar/pec2##Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk" .
+<http://www.semanticweb.org/sadar/pec2##Risk> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://dbpedia.org/page/Risk" .
 # 
-# http://www.representacionconocimientopec2.org/RiskClass
-<http://www.representacionconocimientopec2.org/RiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.semanticweb.org/sadar/pec2##RiskClass
+<http://www.semanticweb.org/sadar/pec2##RiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##RiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the classification of a device according to its level of risk." .
+<http://www.semanticweb.org/sadar/pec2##RiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "RiskClass" .
 # 
-# http://www.representacionconocimientopec2.org/SeriousIncident
-<http://www.representacionconocimientopec2.org/SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.representacionconocimientopec2.org/SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.representacionconocimientopec2.org/Incident> .
+# http://www.semanticweb.org/sadar/pec2##SeriousIncident
+<http://www.semanticweb.org/sadar/pec2##SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/sadar/pec2##Incident> .
+<http://www.semanticweb.org/sadar/pec2##SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an incident that has serious consequences such as death or serious deterioration of health." .
+<http://www.semanticweb.org/sadar/pec2##SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "SeriousIncident" .
 # 
-# http://www.representacionconocimientopec2.org/SeverityLevel
-<http://www.representacionconocimientopec2.org/SeverityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.semanticweb.org/sadar/pec2##SeverityLevel
+<http://www.semanticweb.org/sadar/pec2##SeverityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/sadar/pec2##SeverityLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the severity level of a risk or incident." .
+<http://www.semanticweb.org/sadar/pec2##SeverityLevel> <http://www.w3.org/2000/01/rdf-schema#label> "SeverityLevel" .
 # 
 # 
 # 
@@ -284,73 +382,73 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002
-<http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Manufacturer> .
-<http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002> <http://www.representacionconocimientopec2.org/country> "Germany" .
-<http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002> <http://www.representacionconocimientopec2.org/manufacturerName> "Abbott Medical Devices" .
+# http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002
+<http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+<http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002> <http://www.semanticweb.org/sadar/pec2##deviceId> "Germany" .
+<http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002> <http://www.semanticweb.org/sadar/pec2##manufacturerName> "Abbott Medical Devices" .
 # 
-# http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001
-<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> .
-<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/deviceId> "DEV-001" .
-<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/deviceName> "HeartMate 3 LVAD" .
-<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/deviceType> "ImplantableActiveDevice" .
-<http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> <http://www.representacionconocimientopec2.org/intendedPurpose> "Ventricular assist device for end-stage heart failure" .
+# http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001
+<http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> .
+<http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> <http://www.semanticweb.org/sadar/pec2##deviceIdentifier> "DEV-001" .
+<http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> <http://www.semanticweb.org/sadar/pec2##deviceName> "HeartMate 3 LVAD" .
+<http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> <http://www.semanticweb.org/sadar/pec2##deviceType> "ImplantableActiveDevice" .
+<http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> <http://www.semanticweb.org/sadar/pec2##intendedPurpose> "Ventricular assist device for end-stage heart failure" .
 # 
-# http://www.representacionconocimientopec2.org/Incident_INC001
-<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.representacionconocimientopec2.org/involvesDevice> <http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001> .
-<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.representacionconocimientopec2.org/incidentId> "INC-001" .
-<http://www.representacionconocimientopec2.org/Incident_INC001> <http://www.representacionconocimientopec2.org/reportDate> "2023-03-15T09:30:00" .
+# http://www.semanticweb.org/sadar/pec2##Incident_INC001
+<http://www.semanticweb.org/sadar/pec2##Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##Incident> .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC001> <http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001> .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC001> <http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC001> <http://www.semanticweb.org/sadar/pec2##incidentId> "INC-001" .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC001> <http://www.semanticweb.org/sadar/pec2##reportDate> "2023-03-15T09:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 # 
-# http://www.representacionconocimientopec2.org/Incident_INC002
-<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Incident> .
-<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.representacionconocimientopec2.org/involvesDevice> <http://www.representacionconocimientopec2.org/MicraAV_DEV002> .
-<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.representacionconocimientopec2.org/incidentId> "INC-002" .
-<http://www.representacionconocimientopec2.org/Incident_INC002> <http://www.representacionconocimientopec2.org/reportDate> "2023-04-10T14:20:00" .
+# http://www.semanticweb.org/sadar/pec2##Incident_INC002
+<http://www.semanticweb.org/sadar/pec2##Incident_INC002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##Incident> .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC002> <http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002> .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC002> <http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC002> <http://www.semanticweb.org/sadar/pec2##incidentId> "INC-002" .
+<http://www.semanticweb.org/sadar/pec2##Incident_INC002> <http://www.semanticweb.org/sadar/pec2##reportDate> "2023-04-10T14:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 # 
-# http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001
-<http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Manufacturer> .
-<http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> <http://www.representacionconocimientopec2.org/country> "Ireland" .
-<http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> <http://www.representacionconocimientopec2.org/manufacturerName> "Medronic plc" .
+# http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001
+<http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+<http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> <http://www.semanticweb.org/sadar/pec2##deviceId> "Ireland" .
+<http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> <http://www.semanticweb.org/sadar/pec2##manufacturerName> "Medtronic plc" .
 # 
-# http://www.representacionconocimientopec2.org/MicraAV_DEV002
-<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Device> .
-<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/hasManufacturer> <http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001> .
-<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/deviceId> "DEV-002" .
-<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/deviceName> "Micra AV Transcatheter Pacing System" .
-<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/deviceType> "ActiveImplant" .
-<http://www.representacionconocimientopec2.org/MicraAV_DEV002> <http://www.representacionconocimientopec2.org/intendedPurpose> "Leadless cardiac pacemaker for atrioventricular synchrony" .
+# http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002
+<http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##Device> .
+<http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> .
+<http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> <http://www.semanticweb.org/sadar/pec2##deviceIdentifier> "DEV-002" .
+<http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> <http://www.semanticweb.org/sadar/pec2##deviceName> "Micra AV Transcatheter Pacing System" .
+<http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> <http://www.semanticweb.org/sadar/pec2##deviceType> "ActiveImplant" .
+<http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> <http://www.semanticweb.org/sadar/pec2##intendedPurpose> "Leadless cardiac pacemaker for atrioventricular synchrony" .
 # 
-# http://www.representacionconocimientopec2.org/PacinFailureRisk_R002
-<http://www.representacionconocimientopec2.org/PacinFailureRisk_R002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/PacinFailureRisk_R002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Risk> .
-<http://www.representacionconocimientopec2.org/PacinFailureRisk_R002> <http://www.representacionconocimientopec2.org/hasRisk> <http://www.representacionconocimientopec2.org/Incident_INC002> .
-<http://www.representacionconocimientopec2.org/PacinFailureRisk_R002> <http://www.representacionconocimientopec2.org/riskName> "Pacing Failure" .
+# http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002
+<http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##Risk> .
+<http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002> <http://www.semanticweb.org/sadar/pec2##riskName> "Pacing Failure" .
 # 
-# http://www.representacionconocimientopec2.org/PumpFailureRisk_R001
-<http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/Risk> .
-<http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> <http://www.representacionconocimientopec2.org/hasRisk> <http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> .
-<http://www.representacionconocimientopec2.org/PumpFailureRisk_R001> <http://www.representacionconocimientopec2.org/riskName> "Pump Failure" .
+# http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001
+<http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##Risk> .
+<http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001> <http://www.semanticweb.org/sadar/pec2##riskName> "Pump Failure" .
 # 
-# http://www.representacionconocimientopec2.org/Recall_Action_001
-<http://www.representacionconocimientopec2.org/Recall_Action_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/Recall_Action_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
-<http://www.representacionconocimientopec2.org/Recall_Action_001> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.representacionconocimientopec2.org/Incident_INC001> .
-<http://www.representacionconocimientopec2.org/Recall_Action_001> <http://www.representacionconocimientopec2.org/actionType> "Recall" .
+# http://www.semanticweb.org/sadar/pec2##RecallAction_CA001
+<http://www.semanticweb.org/sadar/pec2##RecallAction_CA001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##RecallAction_CA001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> .
+<http://www.semanticweb.org/sadar/pec2##RecallAction_CA001> <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.semanticweb.org/sadar/pec2##Incident_INC001> .
+<http://www.semanticweb.org/sadar/pec2##RecallAction_CA001> <http://www.semanticweb.org/sadar/pec2##actionType> "Recall" .
 # 
-# http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002
-<http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
-<http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> <http://www.representacionconocimientopec2.org/Incident_INC002> .
-<http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002> <http://www.representacionconocimientopec2.org/actionType> "Software Update" .
+# http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002
+<http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> .
+<http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002> <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.semanticweb.org/sadar/pec2##Incident_INC002> .
+<http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002> <http://www.semanticweb.org/sadar/pec2##actionType> "Software Update" .
 # 
 # 
 # 
@@ -361,83 +459,83 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-<http://www.representacionconocimientopec2.org//c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-<http://www.representacionconocimientopec2.org//i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-<http://www.representacionconocimientopec2.org//d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-<http://www.representacionconocimientopec2.org//m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-_:genid13 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid13 <http://www.w3.org/2000/01/rdf-schema#comment> "si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer)" .
-_:genid13 <http://www.w3.org/2000/01/rdf-schema#label> "Regla2" .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid13 <http://www.w3.org/2003/11/swrl#body> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
-_:genid15 <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//m> .
-_:genid15 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d> .
-_:genid15 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.representacionconocimientopec2.org/hasManufacturer> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
-_:genid17 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d> .
-_:genid17 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Device> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid13 <http://www.w3.org/2003/11/swrl#head> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
-_:genid19 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//m> .
-_:genid19 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Manufacturer> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid20 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid20 <http://www.w3.org/2000/01/rdf-schema#comment> "si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device" .
-_:genid20 <http://www.w3.org/2000/01/rdf-schema#label> "Regla1" .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid20 <http://www.w3.org/2003/11/swrl#body> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
-_:genid22 <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//d> .
-_:genid22 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i> .
-_:genid22 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.representacionconocimientopec2.org/involvesDevice> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+<http://www.semanticweb.org/sadar/ontologies/2026/2/c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/sadar/ontologies/2026/2/i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/sadar/ontologies/2026/2/d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/sadar/ontologies/2026/2/m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid22 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#comment> "si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident.)" .
+_:genid22 <http://www.w3.org/2000/01/rdf-schema#label> "Regla3" .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid22 <http://www.w3.org/2003/11/swrl#body> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
-_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i> .
-_:genid24 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Incident> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/sadar/ontologies/2026/2/i> .
+_:genid24 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/c> .
+_:genid24 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid20 <http://www.w3.org/2003/11/swrl#head> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
-_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d> .
-_:genid26 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Device> .
+_:genid26 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/c> .
+_:genid26 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid6 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid6 <http://www.w3.org/2000/01/rdf-schema#comment> "si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident." .
-_:genid6 <http://www.w3.org/2000/01/rdf-schema#label> "Regla3" .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid6 <http://www.w3.org/2003/11/swrl#body> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
-_:genid8 <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//i> .
-_:genid8 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//c> .
-_:genid8 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.representacionconocimientopec2.org/isCorrectiveActionFor> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
-_:genid10 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//c> .
-_:genid10 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/CorrectiveAction> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid6 <http://www.w3.org/2003/11/swrl#head> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
-_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i> .
-_:genid12 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.representacionconocimientopec2.org/Incident> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid22 <http://www.w3.org/2003/11/swrl#head> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
+_:genid28 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/i> .
+_:genid28 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Incident> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid29 <http://www.w3.org/2000/01/rdf-schema#comment> "si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer)." .
+_:genid29 <http://www.w3.org/2000/01/rdf-schema#label> "Regla2" .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid29 <http://www.w3.org/2003/11/swrl#body> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/sadar/ontologies/2026/2/m> .
+_:genid31 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/d> .
+_:genid31 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/d> .
+_:genid33 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Device> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://www.w3.org/2003/11/swrl#head> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
+_:genid35 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/m> .
+_:genid35 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Manufacturer> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid36 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid36 <http://www.w3.org/2000/01/rdf-schema#comment> "establece que si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device." .
+_:genid36 <http://www.w3.org/2000/01/rdf-schema#label> "Regla1" .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid36 <http://www.w3.org/2003/11/swrl#body> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .
+_:genid38 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/sadar/ontologies/2026/2/d> .
+_:genid38 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/i> .
+_:genid38 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/sadar/pec2##involvesDevice> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
+_:genid40 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/i> .
+_:genid40 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Incident> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid36 <http://www.w3.org/2003/11/swrl#head> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid42 .
+_:genid42 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/d> .
+_:genid42 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Device> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

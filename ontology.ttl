@@ -1,12 +1,15 @@
-@prefix : <http://www.representacionconocimientopec2.org/> .
+@prefix : <http://www.semanticweb.org/sadar/pec2#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.representacionconocimientopec2.org/> .
+@base <http://www.semanticweb.org/sadar/pec2#> .
 
-<http://www.representacionconocimientopec2.org/> rdf:type owl:Ontology .
+<http://www.semanticweb.org/sadar/pec2#> rdf:type owl:Ontology ;
+                                          rdfs:comment "This ontology models medical devices, incidents, risks and corrective actions to support risk management and safety analysis." ,
+                                                       "https://creativecommons.org/licenses/by/4.0/" ;
+                                          rdfs:label "Medical Device Risk Management Ontology" .
 
 #################################################################
 #    Annotation properties
@@ -20,463 +23,558 @@
 #    Object Properties
 #################################################################
 
-###  http://www.representacionconocimientopec2.org/hasCorrectiveAction
-:hasCorrectiveAction rdf:type owl:ObjectProperty ;
-                     owl:inverseOf :isCorrectiveActionFor ;
-                     rdfs:domain :Incident ;
-                     rdfs:range :CorrectiveAction ;
-                     rdfs:comment "Relates an Incident to a CorrectiveAction." ;
-                     rdfs:label "hasCorrectiveAction" .
+###  http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction
+<http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction> rdf:type owl:ObjectProperty ;
+                                                             owl:inverseOf <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> ;
+                                                             rdfs:domain [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                           owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Incident>
+                                                                         ] ;
+                                                             rdfs:range [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                          owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##CorrectiveAction>
+                                                                        ] ;
+                                                             rdfs:comment "Relates an Incident to a CorrectiveAction applied to it." ;
+                                                             rdfs:label "hasCorrectiveAction" .
 
 
-###  http://www.representacionconocimientopec2.org/hasManufacturer
-:hasManufacturer rdf:type owl:ObjectProperty ;
-                 owl:inverseOf :manufactures ;
-                 rdfs:domain :Device ;
-                 rdfs:range :Manufacturer ;
-                 rdfs:comment "Relates a Device to it's Manufacturer." ;
-                 rdfs:label "hasManuFacturer" .
+###  http://www.semanticweb.org/sadar/pec2##hasManufacturer
+<http://www.semanticweb.org/sadar/pec2##hasManufacturer> rdf:type owl:ObjectProperty ;
+                                                         owl:inverseOf <http://www.semanticweb.org/sadar/pec2##manufactures> ;
+                                                         rdf:type owl:InverseFunctionalProperty ;
+                                                         rdfs:domain [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                       owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Device>
+                                                                     ] ;
+                                                         rdfs:range [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                      owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Manufacturer>
+                                                                    ] ;
+                                                         rdfs:comment "Relates a Device to its Manufacturer." ;
+                                                         rdfs:label "hasManufacturer" .
 
 
-###  http://www.representacionconocimientopec2.org/hasRisk
-:hasRisk rdf:type owl:ObjectProperty ;
-         rdfs:domain :Incident ;
-         rdfs:range :Risk ;
-         rdfs:comment "Relates an Incented to a Risk." ;
-         rdfs:label "hasRisk" .
+###  http://www.semanticweb.org/sadar/pec2##hasRisk
+<http://www.semanticweb.org/sadar/pec2##hasRisk> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                               owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Incident>
+                                                             ] ;
+                                                 rdfs:range [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                              owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Risk>
+                                                            ] ;
+                                                 rdfs:comment "Relates an Incident to an identified Risk." ;
+                                                 rdfs:label "hasRisk" .
 
 
-###  http://www.representacionconocimientopec2.org/hasRiskClass
-:hasRiskClass rdf:type owl:ObjectProperty ;
-              rdfs:domain :Device ;
-              rdfs:range :RiskClass ;
-              rdfs:comment "Relates a Device to a RiskClass." ;
-              rdfs:label "hasRiskClass" .
+###  http://www.semanticweb.org/sadar/pec2##hasRiskClass
+<http://www.semanticweb.org/sadar/pec2##hasRiskClass> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                    owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Device>
+                                                                  ] ;
+                                                      rdfs:range [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                   owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##RiskClass>
+                                                                 ] ;
+                                                      rdfs:comment "Relates a Device to its RiskClass." ;
+                                                      rdfs:label "hasRiskClass" .
 
 
-###  http://www.representacionconocimientopec2.org/involvesDevice
-:involvesDevice rdf:type owl:ObjectProperty ;
-                rdfs:domain :Incident ;
-                rdfs:range :Device ;
-                rdfs:comment "Relates an Incident to a Device." ;
-                rdfs:label "involvesDevice" .
+###  http://www.semanticweb.org/sadar/pec2##involvesDevice
+<http://www.semanticweb.org/sadar/pec2##involvesDevice> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                      owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Incident>
+                                                                    ] ;
+                                                        rdfs:range [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                     owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Device>
+                                                                   ] ;
+                                                        rdfs:comment "Relates an Incident to the Device involved in it." ;
+                                                        rdfs:label "involvesDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/isCorrectiveActionFor
-:isCorrectiveActionFor rdf:type owl:ObjectProperty ,
-                                owl:InverseFunctionalProperty ;
-                       rdfs:domain :CorrectiveAction ;
-                       rdfs:range :Incident ;
-                       rdfs:comment "Relates a CorrectiveAction to the Incident it addresses." ;
-                       rdfs:label "isCorrectiveActionFor" .
+###  http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor
+<http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> rdf:type owl:ObjectProperty ,
+                                                                        owl:InverseFunctionalProperty ;
+                                                               rdfs:domain [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                             owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##CorrectiveAction>
+                                                                           ] ;
+                                                               rdfs:range [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                            owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Incident>
+                                                                          ] ;
+                                                               rdfs:comment "Relates a CorrectiveAction to the Incident it addresses." ;
+                                                               rdfs:label "isCorrectiveActionFor" .
 
 
-###  http://www.representacionconocimientopec2.org/manufactures
-:manufactures rdf:type owl:ObjectProperty ,
-                       owl:InverseFunctionalProperty ;
-              rdfs:domain :Manufacturer ;
-              rdfs:range :Device ;
-              rdfs:comment "Relates a Manufacturer to the Devices it produces." ;
-              rdfs:label "manufactures" .
+###  http://www.semanticweb.org/sadar/pec2##manufactures
+<http://www.semanticweb.org/sadar/pec2##manufactures> rdf:type owl:ObjectProperty ,
+                                                               owl:InverseFunctionalProperty ;
+                                                      rdfs:domain [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                    owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Manufacturer>
+                                                                  ] ;
+                                                      rdfs:range [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                   owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Device>
+                                                                 ] ;
+                                                      rdfs:comment "Relates a Manufacturer to the Devices it produces." ;
+                                                      rdfs:label "manufactures" .
 
 
-###  http://www.representacionconocimientopec2.org/reportedBy
-:reportedBy rdf:type owl:ObjectProperty ;
-            rdfs:domain :Incident ;
-            rdfs:range :Manufacturer ;
-            rdfs:comment "Relates an Incident to a Manufacturer." ;
-            rdfs:label "reportedBy" .
+###  http://www.semanticweb.org/sadar/pec2##reportedBy
+<http://www.semanticweb.org/sadar/pec2##reportedBy> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                  owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Incident>
+                                                                ] ;
+                                                    rdfs:range [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                 owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Manufacturer>
+                                                               ] ;
+                                                    rdfs:comment "Relates an Incident to the Manufacturer that reported it." ;
+                                                    rdfs:label "reportedBy" .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.representacionconocimientopec2.org/actionType
-:actionType rdf:type owl:DatatypeProperty ;
-            rdfs:domain :CorrectiveAction ;
-            rdfs:range xsd:string ;
-            rdfs:comment "Stores the type of a CorrectiveAction." ;
-            rdfs:label "actionType" .
+###  http://www.semanticweb.org/sadar/pec2##actionType
+<http://www.semanticweb.org/sadar/pec2##actionType> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:comment "Stores the type of a CorrectiveAction." ;
+                                                    rdfs:label "actionType" .
 
 
-###  http://www.representacionconocimientopec2.org/country
-:country rdf:type owl:DatatypeProperty ;
-         rdfs:domain :Manufacturer ;
-         rdfs:range xsd:string ;
-         rdfs:comment "Stores the country of a Manufacturer." ;
-         rdfs:label "country" .
+###  http://www.semanticweb.org/sadar/pec2##deviceId
+<http://www.semanticweb.org/sadar/pec2##deviceId> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.semanticweb.org/sadar/pec2##Manufacturer> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:comment "Stores the country of a Manufacturer." ;
+                                                  rdfs:label "country" .
 
 
-###  http://www.representacionconocimientopec2.org/deviceId
-:deviceId rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Device ;
-          rdfs:range xsd:string ;
-          rdfs:comment "Stores the identifier of a Device." ;
-          rdfs:label "deviceId" .
+###  http://www.semanticweb.org/sadar/pec2##deviceIdentifier
+<http://www.semanticweb.org/sadar/pec2##deviceIdentifier> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://www.semanticweb.org/sadar/pec2##Device> ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasRiskClass> ;
+                                                                        owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##RiskClass>
+                                                                      ] ;
+                                                          rdfs:range xsd:string ;
+                                                          rdfs:comment "Stores the identifier of a Device." ;
+                                                          rdfs:label "deviceIdentifier" .
 
 
-###  http://www.representacionconocimientopec2.org/deviceName
-:deviceName rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Device ;
-            rdfs:range xsd:string ;
-            rdfs:comment "Stores the name of a Device." ;
-            rdfs:label "deviceName" .
+###  http://www.semanticweb.org/sadar/pec2##deviceName
+<http://www.semanticweb.org/sadar/pec2##deviceName> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:comment "Stores the name of a Device." ;
+                                                    rdfs:label "deviceName" .
 
 
-###  http://www.representacionconocimientopec2.org/deviceType
-:deviceType rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Device ;
-            rdfs:range xsd:string ;
-            rdfs:comment "Stores the type of a Device as a controlled literal value." ;
-            rdfs:label "deviceType" .
+###  http://www.semanticweb.org/sadar/pec2##deviceType
+<http://www.semanticweb.org/sadar/pec2##deviceType> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:comment "Stores the type of a Device as a controlled literal value." ;
+                                                    rdfs:label "deviceType" .
 
 
-###  http://www.representacionconocimientopec2.org/incidentId
-:incidentId rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Incident ;
-            rdfs:range xsd:dateTime ;
-            rdfs:comment "Stores the identifier of an Incident." ;
-            rdfs:label "incidentId" .
+###  http://www.semanticweb.org/sadar/pec2##incidentId
+<http://www.semanticweb.org/sadar/pec2##incidentId> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.semanticweb.org/sadar/pec2##Incident> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:comment "Stores the identifier of an Incident." ;
+                                                    rdfs:label "incidentId" .
 
 
-###  http://www.representacionconocimientopec2.org/intendedPurpose
-:intendedPurpose rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Device ;
-                 rdfs:range xsd:string ;
-                 rdfs:comment "Stores the intended purpose of a Device." ;
-                 rdfs:label "intendedPurpose" .
+###  http://www.semanticweb.org/sadar/pec2##intendedPurpose
+<http://www.semanticweb.org/sadar/pec2##intendedPurpose> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                         rdfs:range xsd:string ;
+                                                         rdfs:comment "Stores the intended purpose of a Device." ;
+                                                         rdfs:label "intendedPurpose" .
 
 
-###  http://www.representacionconocimientopec2.org/manufacturerName
-:manufacturerName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Manufacturer ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "Stores the name of a Manufacturer." ;
-                  rdfs:label "manufacturerName" .
+###  http://www.semanticweb.org/sadar/pec2##manufacturerName
+<http://www.semanticweb.org/sadar/pec2##manufacturerName> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <http://www.semanticweb.org/sadar/pec2##Manufacturer> ;
+                                                          rdfs:range xsd:string ;
+                                                          rdfs:comment "Stores the name of a Manufacturer." ;
+                                                          rdfs:label "manufacturerName" .
 
 
-###  http://www.representacionconocimientopec2.org/reportDate
-:reportDate rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Incident ;
-            rdfs:range xsd:dateTime ;
-            rdfs:comment "Stores the report date of an Incident." ;
-            rdfs:label "reportDate" .
+###  http://www.semanticweb.org/sadar/pec2##reportDate
+<http://www.semanticweb.org/sadar/pec2##reportDate> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.semanticweb.org/sadar/pec2##Incident> ;
+                                                    rdfs:range xsd:dateTime ;
+                                                    rdfs:comment "Stores the report date of an Incident." ;
+                                                    rdfs:label "reportDate" .
 
 
-###  http://www.representacionconocimientopec2.org/riskName
-:riskName rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Risk ;
-          rdfs:range xsd:string ;
-          rdfs:comment "Stores the name of a Risk." ;
-          rdfs:label "riskName" .
+###  http://www.semanticweb.org/sadar/pec2##riskName
+<http://www.semanticweb.org/sadar/pec2##riskName> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <http://www.semanticweb.org/sadar/pec2##Risk> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:comment "Stores the name of a Risk." ;
+                                                  rdfs:label "riskName" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.representacionconocimientopec2.org/ActionStatus
-:ActionStatus rdf:type owl:Class ;
-              rdfs:subClassOf :CorrectiveAction .
+###  http://www.semanticweb.org/sadar/pec2##ActionStatus
+<http://www.semanticweb.org/sadar/pec2##ActionStatus> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> ;
+                                                      rdfs:comment "Represents the status of a corrective action (e.g., pending, completed)." ;
+                                                      rdfs:label "ActionStatus" .
 
 
-###  http://www.representacionconocimientopec2.org/ActiveDevice
-:ActiveDevice rdf:type owl:Class ;
-              rdfs:subClassOf :MedicalDevice .
+###  http://www.semanticweb.org/sadar/pec2##ActiveDevice
+<http://www.semanticweb.org/sadar/pec2##ActiveDevice> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##MedicalDevice> ;
+                                                      rdfs:comment "Represents a medical device that depends on a source of energy other than that generated by the human body." ;
+                                                      rdfs:label "ActiveDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/CompetentAuthority
-:CompetentAuthority rdf:type owl:Class ;
-                    rdfs:subClassOf :Manufacturer .
+###  http://www.semanticweb.org/sadar/pec2##CompetentAuthority
+<http://www.semanticweb.org/sadar/pec2##CompetentAuthority> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##Manufacturer> ;
+                                                            rdfs:comment "Represents an official authority responsible for regulating and supervising medical devices." ;
+                                                            rdfs:label "CompetentAuthority" .
 
 
-###  http://www.representacionconocimientopec2.org/CorrectiveAction
-:CorrectiveAction rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty :isCorrectiveActionFor ;
-                                    owl:someValuesFrom :Incident
-                                  ] .
+###  http://www.semanticweb.org/sadar/pec2##CorrectiveAction
+<http://www.semanticweb.org/sadar/pec2##CorrectiveAction> rdf:type owl:Class ;
+                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> ;
+                                                                            owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Incident>
+                                                                          ] ;
+                                                          rdfs:comment "Represents a corrective action applied in response to an incident." ;
+                                                          rdfs:label "CorrectiveAction" .
 
 
-###  http://www.representacionconocimientopec2.org/CriticalRisk
-:CriticalRisk rdf:type owl:Class ;
-              rdfs:subClassOf :Risk .
+###  http://www.semanticweb.org/sadar/pec2##CriticalRisk
+<http://www.semanticweb.org/sadar/pec2##CriticalRisk> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##Risk> .
 
 
-###  http://www.representacionconocimientopec2.org/Device
-:Device rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasManufacturer ;
-                          owl:someValuesFrom :Manufacturer
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasRiskClass ;
-                          owl:someValuesFrom :RiskClass
-                        ] .
+###  http://www.semanticweb.org/sadar/pec2##Device
+<http://www.semanticweb.org/sadar/pec2##Device> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                  owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Manufacturer>
+                                                                ] ;
+                                                rdfs:comment "Represents a medical device or an in vitro diagnostic device." ;
+                                                rdfs:label "Device" .
 
 
-###  http://www.representacionconocimientopec2.org/DeviceType
-:DeviceType rdf:type owl:Class .
+###  http://www.semanticweb.org/sadar/pec2##DeviceType
+<http://www.semanticweb.org/sadar/pec2##DeviceType> rdf:type owl:Class ;
+                                                    rdfs:comment "Represents the regulatory risk classification of a device." ;
+                                                    rdfs:label "DeviceType" .
 
 
-###  http://www.representacionconocimientopec2.org/HighRiskDevice
-:HighRiskDevice rdf:type owl:Class ;
-                rdfs:subClassOf :MedicalDevice .
+###  http://www.semanticweb.org/sadar/pec2##HighRiskDevice
+<http://www.semanticweb.org/sadar/pec2##HighRiskDevice> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##MedicalDevice> ;
+                                                        rdfs:comment "Represents a medical device classified as high risk based on regulatory criteria." ;
+                                                        rdfs:label "HighRiskDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/IVDRDevice
-:IVDRDevice rdf:type owl:Class ;
-            rdfs:subClassOf :InVitroDiagnosticDevice .
+###  http://www.semanticweb.org/sadar/pec2##IVDRDevice
+<http://www.semanticweb.org/sadar/pec2##IVDRDevice> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice> ;
+                                                    rdfs:comment "Represents an in vitro diagnostic device regulated under the IVDR." ;
+                                                    rdfs:label "IVDRDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/ImplantableDevice
-:ImplantableDevice rdf:type owl:Class ;
-                   rdfs:subClassOf :MedicalDevice .
+###  http://www.semanticweb.org/sadar/pec2##ImplantableDevice
+<http://www.semanticweb.org/sadar/pec2##ImplantableDevice> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##MedicalDevice> ;
+                                                           rdfs:comment "Represents a medical device intended to be totally or partially introduced into the human body." ;
+                                                           rdfs:label "ImplantableDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice
-:InVitroDiagnosticDevice rdf:type owl:Class ;
-                         rdfs:subClassOf :Device .
+###  http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice
+<http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                                 rdfs:comment "Represents a device used for the in vitro examination of samples derived from the human body." ;
+                                                                 rdfs:label "InVitroDiagnosticDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/Incident
-:Incident rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasRisk ;
-                            owl:someValuesFrom :Risk
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :involvesDevice ;
-                            owl:someValuesFrom :Device
-                          ] .
+###  http://www.semanticweb.org/sadar/pec2##Incident
+<http://www.semanticweb.org/sadar/pec2##Incident> rdf:type owl:Class ;
+                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/sadar/pec2##hasRisk> ;
+                                                                    owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Risk>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.semanticweb.org/sadar/pec2##involvesDevice> ;
+                                                                    owl:someValuesFrom <http://www.semanticweb.org/sadar/pec2##Device>
+                                                                  ] ;
+                                                  rdfs:comment "Represents an incident associated with a device." .
 
 
-###  http://www.representacionconocimientopec2.org/IncidentType
-:IncidentType rdf:type owl:Class ;
-              rdfs:subClassOf :Incident .
+###  http://www.semanticweb.org/sadar/pec2##IncidentType
+<http://www.semanticweb.org/sadar/pec2##IncidentType> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##Incident> ;
+                                                      rdfs:comment "Represents the classification or type of an incident." ;
+                                                      rdfs:label "IncidentType" .
 
 
-###  http://www.representacionconocimientopec2.org/MDRDevice
-:MDRDevice rdf:type owl:Class ;
-           rdfs:subClassOf :MedicalDevice .
+###  http://www.semanticweb.org/sadar/pec2##MDRDevice
+<http://www.semanticweb.org/sadar/pec2##MDRDevice> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##MedicalDevice> ;
+                                                   rdfs:comment "Represents a medical device regulated under the Medical Device Regulation (MDR)." ;
+                                                   rdfs:label "MDRDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/Manufacturer
-:Manufacturer rdf:type owl:Class .
+###  http://www.semanticweb.org/sadar/pec2##Manufacturer
+<http://www.semanticweb.org/sadar/pec2##Manufacturer> rdf:type owl:Class ;
+                                                      rdfs:comment "Represents a manufacturer of medical devices." ;
+                                                      rdfs:label "Manufacturer" .
 
 
-###  http://www.representacionconocimientopec2.org/MedicalDevice
-:MedicalDevice rdf:type owl:Class ;
-               rdfs:subClassOf :Device .
+###  http://www.semanticweb.org/sadar/pec2##MedicalDevice
+<http://www.semanticweb.org/sadar/pec2##MedicalDevice> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                       rdfs:comment "Represents a medical device as defined by applicable medical regulations." ;
+                                                       rdfs:label "MedicalDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/ProbabilityLevel
-:ProbabilityLevel rdf:type owl:Class .
+###  http://www.semanticweb.org/sadar/pec2##ProbabilityLevel
+<http://www.semanticweb.org/sadar/pec2##ProbabilityLevel> rdf:type owl:Class ;
+                                                          rdfs:comment "Represents the probability level associated with a risk occurrence." ;
+                                                          rdfs:label "ProbabilityLevel" .
 
 
-###  http://www.representacionconocimientopec2.org/RegulatoryFramework
-:RegulatoryFramework rdf:type owl:Class .
+###  http://www.semanticweb.org/sadar/pec2##RegulatoryFramework
+<http://www.semanticweb.org/sadar/pec2##RegulatoryFramework> rdf:type owl:Class ;
+                                                             rdfs:comment "Represents the regulatory framework or legislation applicable to a medical device (e.g., MDR, IVDR)." ;
+                                                             rdfs:label "RegulatoryFramework" .
 
 
-###  http://www.representacionconocimientopec2.org/RequiresMonitoring
-:RequiresMonitoring rdf:type owl:Class ;
-                    rdfs:subClassOf :Device .
+###  http://www.semanticweb.org/sadar/pec2##RequiresMonitoring
+<http://www.semanticweb.org/sadar/pec2##RequiresMonitoring> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                            rdfs:comment "Represents a device that requires continuous or periodic monitoring during its use." ;
+                                                            rdfs:label "RequiresMonitoring" .
 
 
-###  http://www.representacionconocimientopec2.org/ReusableDevice
-:ReusableDevice rdf:type owl:Class ;
-                rdfs:subClassOf :MedicalDevice .
+###  http://www.semanticweb.org/sadar/pec2##ReusableDevice
+<http://www.semanticweb.org/sadar/pec2##ReusableDevice> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##MedicalDevice> ;
+                                                        rdfs:comment "Represents a medical device intended to be used multiple times." ;
+                                                        rdfs:label "ReusableDevice" .
 
 
-###  http://www.representacionconocimientopec2.org/Risk
-:Risk rdf:type owl:Class ;
-      rdfs:seeAlso "rdfs:seeAlso → https://dbpedia.org/page/Risk" .
+###  http://www.semanticweb.org/sadar/pec2##Risk
+<http://www.semanticweb.org/sadar/pec2##Risk> rdf:type owl:Class ;
+                                              rdfs:comment "Represents a risk associated with a medical device or incident." ;
+                                              rdfs:label "Risk" ;
+                                              rdfs:seeAlso "https://dbpedia.org/page/Risk" .
 
 
-###  http://www.representacionconocimientopec2.org/RiskClass
-:RiskClass rdf:type owl:Class .
+###  http://www.semanticweb.org/sadar/pec2##RiskClass
+<http://www.semanticweb.org/sadar/pec2##RiskClass> rdf:type owl:Class ;
+                                                   rdfs:comment "Represents the classification of a device according to its level of risk." ;
+                                                   rdfs:label "RiskClass" .
 
 
-###  http://www.representacionconocimientopec2.org/SeriousIncident
-:SeriousIncident rdf:type owl:Class ;
-                 rdfs:subClassOf :Incident .
+###  http://www.semanticweb.org/sadar/pec2##SeriousIncident
+<http://www.semanticweb.org/sadar/pec2##SeriousIncident> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.semanticweb.org/sadar/pec2##Incident> ;
+                                                         rdfs:comment "Represents an incident that has serious consequences such as death or serious deterioration of health." ;
+                                                         rdfs:label "SeriousIncident" .
 
 
-###  http://www.representacionconocimientopec2.org/SeverityLevel
-:SeverityLevel rdf:type owl:Class .
+###  http://www.semanticweb.org/sadar/pec2##SeverityLevel
+<http://www.semanticweb.org/sadar/pec2##SeverityLevel> rdf:type owl:Class ;
+                                                       rdfs:comment "Represents the severity level of a risk or incident." ;
+                                                       rdfs:label "SeverityLevel" .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002
-:Abbott_Medical_Devices_MAN002 rdf:type owl:NamedIndividual ,
-                                        :Manufacturer ;
-                               :country "Germany" ;
-                               :manufacturerName "Abbott Medical Devices" .
+###  http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002
+<http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/sadar/pec2##Manufacturer> ;
+                                                                       <http://www.semanticweb.org/sadar/pec2##deviceId> "Germany" ;
+                                                                       <http://www.semanticweb.org/sadar/pec2##manufacturerName> "Abbott Medical Devices" .
 
 
-###  http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001
-:HeartMate3LVAD_DEV001 rdf:type owl:NamedIndividual ,
-                                :Device ;
-                       :hasManufacturer :Medtronic_plc_MAN001 ;
-                       :deviceId "DEV-001" ;
-                       :deviceName "HeartMate 3 LVAD" ;
-                       :deviceType "ImplantableActiveDevice" ;
-                       :intendedPurpose "Ventricular assist device for end-stage heart failure" .
+###  http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001
+<http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                               <http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> ;
+                                                               <http://www.semanticweb.org/sadar/pec2##deviceIdentifier> "DEV-001" ;
+                                                               <http://www.semanticweb.org/sadar/pec2##deviceName> "HeartMate 3 LVAD" ;
+                                                               <http://www.semanticweb.org/sadar/pec2##deviceType> "ImplantableActiveDevice" ;
+                                                               <http://www.semanticweb.org/sadar/pec2##intendedPurpose> "Ventricular assist device for end-stage heart failure" .
 
 
-###  http://www.representacionconocimientopec2.org/Incident_INC001
-:Incident_INC001 rdf:type owl:NamedIndividual ,
-                          :Incident ;
-                 :involvesDevice :HeartMate3LVAD_DEV001 ;
-                 :incidentId "INC-001" ;
-                 :reportDate "2023-03-15T09:30:00" .
+###  http://www.semanticweb.org/sadar/pec2##Incident_INC001
+<http://www.semanticweb.org/sadar/pec2##Incident_INC001> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/sadar/pec2##Incident> ;
+                                                         <http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001> ;
+                                                         <http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001> ;
+                                                         <http://www.semanticweb.org/sadar/pec2##incidentId> "INC-001" ;
+                                                         <http://www.semanticweb.org/sadar/pec2##reportDate> "2023-03-15T09:30:00"^^xsd:dateTime .
 
 
-###  http://www.representacionconocimientopec2.org/Incident_INC002
-:Incident_INC002 rdf:type owl:NamedIndividual ,
-                          :Incident ;
-                 :involvesDevice :MicraAV_DEV002 ;
-                 :incidentId "INC-002" ;
-                 :reportDate "2023-04-10T14:20:00" .
+###  http://www.semanticweb.org/sadar/pec2##Incident_INC002
+<http://www.semanticweb.org/sadar/pec2##Incident_INC002> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.semanticweb.org/sadar/pec2##Incident> ;
+                                                         <http://www.semanticweb.org/sadar/pec2##hasRisk> <http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002> ;
+                                                         <http://www.semanticweb.org/sadar/pec2##involvesDevice> <http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> ;
+                                                         <http://www.semanticweb.org/sadar/pec2##incidentId> "INC-002" ;
+                                                         <http://www.semanticweb.org/sadar/pec2##reportDate> "2023-04-10T14:20:00"^^xsd:dateTime .
 
 
-###  http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001
-:Medtronic_plc_MAN001 rdf:type owl:NamedIndividual ,
-                               :Manufacturer ;
-                      :country "Ireland" ;
-                      :manufacturerName "Medronic plc" .
+###  http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001
+<http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/sadar/pec2##Manufacturer> ;
+                                                              <http://www.semanticweb.org/sadar/pec2##deviceId> "Ireland" ;
+                                                              <http://www.semanticweb.org/sadar/pec2##manufacturerName> "Medtronic plc" .
 
 
-###  http://www.representacionconocimientopec2.org/MicraAV_DEV002
-:MicraAV_DEV002 rdf:type owl:NamedIndividual ,
-                         :Device ;
-                :hasManufacturer :Medtronic_plc_MAN001 ;
-                :deviceId "DEV-002" ;
-                :deviceName "Micra AV Transcatheter Pacing System" ;
-                :deviceType "ActiveImplant" ;
-                :intendedPurpose "Leadless cardiac pacemaker for atrioventricular synchrony" .
+###  http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002
+<http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                        <http://www.semanticweb.org/sadar/pec2##hasManufacturer> <http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001> ;
+                                                        <http://www.semanticweb.org/sadar/pec2##deviceIdentifier> "DEV-002" ;
+                                                        <http://www.semanticweb.org/sadar/pec2##deviceName> "Micra AV Transcatheter Pacing System" ;
+                                                        <http://www.semanticweb.org/sadar/pec2##deviceType> "ActiveImplant" ;
+                                                        <http://www.semanticweb.org/sadar/pec2##intendedPurpose> "Leadless cardiac pacemaker for atrioventricular synchrony" .
 
 
-###  http://www.representacionconocimientopec2.org/PacinFailureRisk_R002
-:PacinFailureRisk_R002 rdf:type owl:NamedIndividual ,
-                                :Risk ;
-                       :hasRisk :Incident_INC002 ;
-                       :riskName "Pacing Failure" .
+###  http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002
+<http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.semanticweb.org/sadar/pec2##Risk> ;
+                                                                <http://www.semanticweb.org/sadar/pec2##riskName> "Pacing Failure" .
 
 
-###  http://www.representacionconocimientopec2.org/PumpFailureRisk_R001
-:PumpFailureRisk_R001 rdf:type owl:NamedIndividual ,
-                               :Risk ;
-                      :hasRisk :PumpFailureRisk_R001 ;
-                      :riskName "Pump Failure" .
+###  http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001
+<http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/sadar/pec2##Risk> ;
+                                                              <http://www.semanticweb.org/sadar/pec2##riskName> "Pump Failure" .
 
 
-###  http://www.representacionconocimientopec2.org/Recall_Action_001
-:Recall_Action_001 rdf:type owl:NamedIndividual ,
-                            :CorrectiveAction ;
-                   :isCorrectiveActionFor :Incident_INC001 ;
-                   :actionType "Recall" .
+###  http://www.semanticweb.org/sadar/pec2##RecallAction_CA001
+<http://www.semanticweb.org/sadar/pec2##RecallAction_CA001> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> ;
+                                                            <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.semanticweb.org/sadar/pec2##Incident_INC001> ;
+                                                            <http://www.semanticweb.org/sadar/pec2##actionType> "Recall" .
 
 
-###  http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002
-:SoftwareUpdate_CA002 rdf:type owl:NamedIndividual ,
-                               :CorrectiveAction ;
-                      :isCorrectiveActionFor :Incident_INC002 ;
-                      :actionType "Software Update" .
+###  http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002
+<http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> ;
+                                                              <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> <http://www.semanticweb.org/sadar/pec2##Incident_INC002> ;
+                                                              <http://www.semanticweb.org/sadar/pec2##actionType> "Software Update" .
 
 
 #################################################################
 #    Rules
 #################################################################
 
-<http://www.representacionconocimientopec2.org//c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/sadar/ontologies/2026/2/c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<http://www.representacionconocimientopec2.org//i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/sadar/ontologies/2026/2/i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<http://www.representacionconocimientopec2.org//d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/sadar/ontologies/2026/2/d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<http://www.representacionconocimientopec2.org//m> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer)" ;
-   rdfs:label "Regla2" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasManufacturer ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//m>
-                                                                ] ;
-                                                      rdf:rest rdf:nil
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Manufacturer ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//m>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
+<http://www.semanticweb.org/sadar/ontologies/2026/2/m> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device" ;
-   rdfs:label "Regla1" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :involvesDevice ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//d>
-                                                                ] ;
-                                                      rdf:rest rdf:nil
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//d>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident." ;
+   rdfs:comment "si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident.)" ;
    rdfs:label "Regla3" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CorrectiveAction ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//c>
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##CorrectiveAction> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/c>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCorrectiveActionFor ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//c> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.representacionconocimientopec2.org//i>
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/sadar/ontologies/2026/2/i>
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.representacionconocimientopec2.org//i>
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Incident> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/i>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer)." ;
+   rdfs:label "Regla2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/d>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/sadar/pec2##hasManufacturer> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/d> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/sadar/ontologies/2026/2/m>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Manufacturer> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/m>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "establece que si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device." ;
+   rdfs:label "Regla1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Incident> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/i>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/sadar/pec2##involvesDevice> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/i> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/sadar/ontologies/2026/2/d>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/sadar/pec2##Device> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/sadar/ontologies/2026/2/d>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
