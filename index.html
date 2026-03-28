@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.representacionconocimientopec2.org/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.representacionconocimientopec2.org/","name":"http://www.representacionconocimientopec2.org/", "headline":"Document describing the ontology http://www.representacionconocimientopec2.org/", "dateReleased":"Fri Mar 27 10:53:36 CET 2026"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/sadar/pec2#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/sadar/pec2#","name":"http://www.semanticweb.org/sadar/pec2#", "headline":"Document describing the ontology http://www.semanticweb.org/sadar/pec2#", "dateReleased":"Sat Mar 28 09:43:47 CET 2026"}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -90,7 +90,7 @@ This is a place holder text for the introduction. The introduction should briefl
   
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">[Ontology Name]: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">Medical Device Risk Management Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
@@ -98,342 +98,309 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#ActionStatus"
-         title="http://www.representacionconocimientopec2.org/ActionStatus">
-         <span>Action Status</span>
+      <a href="#CriticalRisk"
+         title="http://www.semanticweb.org/sadar/pec2##CriticalRisk">
+         <span># Critical Risk</span>
       </a>
+   </li>
+   <li>
+      <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident">
+         <span># Incident</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ActionStatus"
+         title="http://www.semanticweb.org/sadar/pec2##ActionStatus">ActionStatus</a>
    </li>
    <li>
       <a href="#ActiveDevice"
-         title="http://www.representacionconocimientopec2.org/ActiveDevice">
-         <span>Active Device</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##ActiveDevice">ActiveDevice</a>
    </li>
    <li>
       <a href="#CompetentAuthority"
-         title="http://www.representacionconocimientopec2.org/CompetentAuthority">
-         <span>Competent Authority</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##CompetentAuthority">CompetentAuthority</a>
    </li>
    <li>
       <a href="#CorrectiveAction"
-         title="http://www.representacionconocimientopec2.org/CorrectiveAction">
-         <span>Corrective Action</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a>
    </li>
    <li>
-      <a href="#CriticalRisk"
-         title="http://www.representacionconocimientopec2.org/CriticalRisk">
-         <span>Critical Risk</span>
-      </a>
+      <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a>
    </li>
    <li>
-      <a href="#Device"
-         title="http://www.representacionconocimientopec2.org/Device">
-         <span>Device</span>
-      </a>
+      <a href="#DeviceType"
+         title="http://www.semanticweb.org/sadar/pec2##DeviceType">DeviceType</a>
    </li>
    <li>
       <a href="#HighRiskDevice"
-         title="http://www.representacionconocimientopec2.org/HighRiskDevice">
-         <span>High Risk Device</span>
-      </a>
-   </li>
-   <li>
-      <a href="#IVDRDevice"
-         title="http://www.representacionconocimientopec2.org/IVDRDevice">
-         <span>I V D R Device</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##HighRiskDevice">HighRiskDevice</a>
    </li>
    <li>
       <a href="#ImplantableDevice"
-         title="http://www.representacionconocimientopec2.org/ImplantableDevice">
-         <span>Implantable Device</span>
-      </a>
-   </li>
-   <li>
-      <a href="#InVitroDiagnosticDevice"
-         title="http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice">
-         <span>In Vitro Diagnostic Device</span>
-      </a>
-   </li>
-   <li>
-      <a href="#Incident"
-         title="http://www.representacionconocimientopec2.org/Incident">
-         <span>Incident</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##ImplantableDevice">ImplantableDevice</a>
    </li>
    <li>
       <a href="#IncidentType"
-         title="http://www.representacionconocimientopec2.org/IncidentType">
-         <span>Incident Type</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##IncidentType">IncidentType</a>
    </li>
    <li>
-      <a href="#MDRDevice"
-         title="http://www.representacionconocimientopec2.org/MDRDevice">
-         <span>M D R Device</span>
-      </a>
+      <a href="#InVitroDiagnosticDevice"
+         title="http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice">InVitroDiagnosticDevice</a>
+   </li>
+   <li>
+      <a href="#IVDRDevice"
+         title="http://www.semanticweb.org/sadar/pec2##IVDRDevice">IVDRDevice</a>
+   </li>
+   <li>
+      <a href="#Manufacturer"
+         title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a>
+   </li>
+   <li>
+      <a href="#MDRDevice" title="http://www.semanticweb.org/sadar/pec2##MDRDevice">MDRDevice</a>
    </li>
    <li>
       <a href="#MedicalDevice"
-         title="http://www.representacionconocimientopec2.org/MedicalDevice">
-         <span>Medical Device</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##MedicalDevice">MedicalDevice</a>
+   </li>
+   <li>
+      <a href="#ProbabilityLevel"
+         title="http://www.semanticweb.org/sadar/pec2##ProbabilityLevel">ProbabilityLevel</a>
+   </li>
+   <li>
+      <a href="#RegulatoryFramework"
+         title="http://www.semanticweb.org/sadar/pec2##RegulatoryFramework">RegulatoryFramework</a>
    </li>
    <li>
       <a href="#RequiresMonitoring"
-         title="http://www.representacionconocimientopec2.org/RequiresMonitoring">
-         <span>Requires Monitoring</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##RequiresMonitoring">RequiresMonitoring</a>
    </li>
    <li>
       <a href="#ReusableDevice"
-         title="http://www.representacionconocimientopec2.org/ReusableDevice">
-         <span>Reusable Device</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##ReusableDevice">ReusableDevice</a>
    </li>
    <li>
-      <a href="#Risk"
-         title="http://www.representacionconocimientopec2.org/Risk">
-         <span>Risk</span>
-      </a>
+      <a href="#Risk" title="http://www.semanticweb.org/sadar/pec2##Risk">Risk</a>
+   </li>
+   <li>
+      <a href="#RiskClass" title="http://www.semanticweb.org/sadar/pec2##RiskClass">RiskClass</a>
    </li>
    <li>
       <a href="#SeriousIncident"
-         title="http://www.representacionconocimientopec2.org/SeriousIncident">
-         <span>Serious Incident</span>
-      </a>
+         title="http://www.semanticweb.org/sadar/pec2##SeriousIncident">SeriousIncident</a>
+   </li>
+   <li>
+      <a href="#SeverityLevel"
+         title="http://www.semanticweb.org/sadar/pec2##SeverityLevel">SeverityLevel</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
       <a href="#hasCorrectiveAction"
-         title="http://www.representacionconocimientopec2.org/hasCorrectiveAction">hasCorrectiveAction</a>
+         title="http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction">hasCorrectiveAction</a>
    </li>
    <li>
       <a href="#hasManufacturer"
-         title="http://www.representacionconocimientopec2.org/hasManufacturer">hasManuFacturer</a>
+         title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a>
    </li>
    <li>
-      <a href="#hasRisk"
-         title="http://www.representacionconocimientopec2.org/hasRisk">hasRisk</a>
+      <a href="#hasRisk" title="http://www.semanticweb.org/sadar/pec2##hasRisk">hasRisk</a>
    </li>
    <li>
       <a href="#hasRiskClass"
-         title="http://www.representacionconocimientopec2.org/hasRiskClass">hasRiskClass</a>
+         title="http://www.semanticweb.org/sadar/pec2##hasRiskClass">hasRiskClass</a>
    </li>
    <li>
       <a href="#involvesDevice"
-         title="http://www.representacionconocimientopec2.org/involvesDevice">involvesDevice</a>
+         title="http://www.semanticweb.org/sadar/pec2##involvesDevice">involvesDevice</a>
    </li>
    <li>
       <a href="#isCorrectiveActionFor"
-         title="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">isCorrectiveActionFor</a>
+         title="http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor">isCorrectiveActionFor</a>
    </li>
    <li>
       <a href="#manufactures"
-         title="http://www.representacionconocimientopec2.org/manufactures">manufactures</a>
+         title="http://www.semanticweb.org/sadar/pec2##manufactures">manufactures</a>
    </li>
    <li>
       <a href="#reportedBy"
-         title="http://www.representacionconocimientopec2.org/reportedBy">reportedBy</a>
+         title="http://www.semanticweb.org/sadar/pec2##reportedBy">reportedBy</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
       <a href="#actionType"
-         title="http://www.representacionconocimientopec2.org/actionType">actionType</a>
+         title="http://www.semanticweb.org/sadar/pec2##actionType">actionType</a>
    </li>
    <li>
-      <a href="#country"
-         title="http://www.representacionconocimientopec2.org/country">country</a>
+      <a href="#deviceId" title="http://www.semanticweb.org/sadar/pec2##deviceId">country</a>
    </li>
    <li>
-      <a href="#deviceId"
-         title="http://www.representacionconocimientopec2.org/deviceId">deviceId</a>
+      <a href="#deviceIdentifier"
+         title="http://www.semanticweb.org/sadar/pec2##deviceIdentifier">deviceIdentifier</a>
    </li>
    <li>
       <a href="#deviceName"
-         title="http://www.representacionconocimientopec2.org/deviceName">deviceName</a>
+         title="http://www.semanticweb.org/sadar/pec2##deviceName">deviceName</a>
    </li>
    <li>
       <a href="#deviceType"
-         title="http://www.representacionconocimientopec2.org/deviceType">deviceType</a>
+         title="http://www.semanticweb.org/sadar/pec2##deviceType">deviceType</a>
    </li>
    <li>
       <a href="#incidentId"
-         title="http://www.representacionconocimientopec2.org/incidentId">incidentId</a>
+         title="http://www.semanticweb.org/sadar/pec2##incidentId">incidentId</a>
    </li>
    <li>
       <a href="#intendedPurpose"
-         title="http://www.representacionconocimientopec2.org/intendedPurpose">intendedPurpose</a>
+         title="http://www.semanticweb.org/sadar/pec2##intendedPurpose">intendedPurpose</a>
    </li>
    <li>
       <a href="#manufacturerName"
-         title="http://www.representacionconocimientopec2.org/manufacturerName">manufacturerName</a>
+         title="http://www.semanticweb.org/sadar/pec2##manufacturerName">manufacturerName</a>
    </li>
    <li>
       <a href="#reportDate"
-         title="http://www.representacionconocimientopec2.org/reportDate">reportDate</a>
+         title="http://www.semanticweb.org/sadar/pec2##reportDate">reportDate</a>
    </li>
    <li>
-      <a href="#riskName"
-         title="http://www.representacionconocimientopec2.org/riskName">riskName</a>
+      <a href="#riskName" title="http://www.semanticweb.org/sadar/pec2##riskName">riskName</a>
    </li>
 </ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
       <a href="#Abbott_Medical_Devices_MAN002"
-         title="http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002">
-         <span>Abbott Medical Devices M A N002</span>
+         title="http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002">
+         <span># Abbott Medical Devices M A N002</span>
       </a>
    </li>
    <li>
       <a href="#HeartMate3LVAD_DEV001"
-         title="http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001">
-         <span>Heart Mate3 L V A D D E V001</span>
+         title="http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001">
+         <span># Heart Mate3 L V A D D E V001</span>
       </a>
    </li>
    <li>
       <a href="#Incident_INC001"
-         title="http://www.representacionconocimientopec2.org/Incident_INC001">
-         <span>Incident I N C001</span>
+         title="http://www.semanticweb.org/sadar/pec2##Incident_INC001">
+         <span># Incident I N C001</span>
       </a>
    </li>
    <li>
       <a href="#Incident_INC002"
-         title="http://www.representacionconocimientopec2.org/Incident_INC002">
-         <span>Incident I N C002</span>
+         title="http://www.semanticweb.org/sadar/pec2##Incident_INC002">
+         <span># Incident I N C002</span>
       </a>
    </li>
    <li>
       <a href="#Medtronic_plc_MAN001"
-         title="http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001">
-         <span>Medtronic plc M A N001</span>
+         title="http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001">
+         <span># Medtronic plc M A N001</span>
       </a>
    </li>
    <li>
       <a href="#MicraAV_DEV002"
-         title="http://www.representacionconocimientopec2.org/MicraAV_DEV002">
-         <span>Micra A V D E V002</span>
+         title="http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002">
+         <span># Micra A V D E V002</span>
       </a>
    </li>
    <li>
-      <a href="#PacinFailureRisk_R002"
-         title="http://www.representacionconocimientopec2.org/PacinFailureRisk_R002">
-         <span>Pacin Failure Risk R002</span>
+      <a href="#PacingFailureRisk_R002"
+         title="http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002">
+         <span># Pacing Failure Risk R002</span>
       </a>
    </li>
    <li>
       <a href="#PumpFailureRisk_R001"
-         title="http://www.representacionconocimientopec2.org/PumpFailureRisk_R001">
-         <span>Pump Failure Risk R001</span>
+         title="http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001">
+         <span># Pump Failure Risk R001</span>
       </a>
    </li>
    <li>
-      <a href="#Recall_Action_001"
-         title="http://www.representacionconocimientopec2.org/Recall_Action_001">
-         <span>Recall Action 001</span>
+      <a href="#RecallAction_CA001"
+         title="http://www.semanticweb.org/sadar/pec2##RecallAction_CA001">
+         <span># Recall Action C A001</span>
       </a>
    </li>
    <li>
       <a href="#SoftwareUpdate_CA002"
-         title="http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002">
-         <span>Software Update C A002</span>
+         title="http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002">
+         <span># Software Update C A002</span>
       </a>
    </li>
 </ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#d4e762">Regla1</a>
+      <a href="#d4e1127">Regla1</a>
    </li>
    <li>
-      <a href="#d4e681">Regla2</a>
+      <a href="#d4e1046">Regla2</a>
    </li>
    <li>
-      <a href="#d4e843">Regla3</a>
+      <a href="#d4e965">Regla3</a>
    </li>
 </ul>
 </div>
   
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">[Ontology Name]: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">Medical Device Risk Management Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.
-
-</span></div>
+<span class="markdown">This ontology models medical devices, incidents, risks and corrective actions to support risk management and safety analysis.</span></div>
    
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for [Ontology Name] classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by [Ontology Name].
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Medical Device Risk Management Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Medical Device Risk Management Ontology.
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#ActionStatus" title="http://www.representacionconocimientopec2.org/ActionStatus"> <span>Action Status</span> </a></li>
-  <li><a href="#ActiveDevice" title="http://www.representacionconocimientopec2.org/ActiveDevice"> <span>Active Device</span> </a></li>
-  <li><a href="#CompetentAuthority" title="http://www.representacionconocimientopec2.org/CompetentAuthority"> <span>Competent Authority</span> </a></li>
-  <li><a href="#CorrectiveAction" title="http://www.representacionconocimientopec2.org/CorrectiveAction"> <span>Corrective Action</span> </a></li>
-  <li><a href="#CriticalRisk" title="http://www.representacionconocimientopec2.org/CriticalRisk"> <span>Critical Risk</span> </a></li>
-  <li><a href="#Device" title="http://www.representacionconocimientopec2.org/Device"> <span>Device</span> </a></li>
-  <li><a href="#HighRiskDevice" title="http://www.representacionconocimientopec2.org/HighRiskDevice"> <span>High Risk Device</span> </a></li>
-  <li><a href="#IVDRDevice" title="http://www.representacionconocimientopec2.org/IVDRDevice"> <span>I V D R Device</span> </a></li>
-  <li><a href="#ImplantableDevice" title="http://www.representacionconocimientopec2.org/ImplantableDevice"> <span>Implantable Device</span> </a></li>
-  <li><a href="#InVitroDiagnosticDevice" title="http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice"> <span>In Vitro Diagnostic Device</span> </a></li>
-  <li><a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident"> <span>Incident</span> </a></li>
-  <li><a href="#IncidentType" title="http://www.representacionconocimientopec2.org/IncidentType"> <span>Incident Type</span> </a></li>
-  <li><a href="#MDRDevice" title="http://www.representacionconocimientopec2.org/MDRDevice"> <span>M D R Device</span> </a></li>
-  <li><a href="#MedicalDevice" title="http://www.representacionconocimientopec2.org/MedicalDevice"> <span>Medical Device</span> </a></li>
-  <li><a href="#RequiresMonitoring" title="http://www.representacionconocimientopec2.org/RequiresMonitoring"> <span>Requires Monitoring</span> </a></li>
-  <li><a href="#ReusableDevice" title="http://www.representacionconocimientopec2.org/ReusableDevice"> <span>Reusable Device</span> </a></li>
-  <li><a href="#Risk" title="http://www.representacionconocimientopec2.org/Risk"> <span>Risk</span> </a></li>
-  <li><a href="#SeriousIncident" title="http://www.representacionconocimientopec2.org/SeriousIncident"> <span>Serious Incident</span> </a></li>
+  <li><a href="#CriticalRisk" title="http://www.semanticweb.org/sadar/pec2##CriticalRisk"> <span># Critical Risk</span> </a></li>
+  <li><a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"> <span># Incident</span> </a></li>
+  <li><a href="#ActionStatus" title="http://www.semanticweb.org/sadar/pec2##ActionStatus">ActionStatus</a></li>
+  <li><a href="#ActiveDevice" title="http://www.semanticweb.org/sadar/pec2##ActiveDevice">ActiveDevice</a></li>
+  <li><a href="#CompetentAuthority" title="http://www.semanticweb.org/sadar/pec2##CompetentAuthority">CompetentAuthority</a></li>
+  <li><a href="#CorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a></li>
+  <li><a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a></li>
+  <li><a href="#DeviceType" title="http://www.semanticweb.org/sadar/pec2##DeviceType">DeviceType</a></li>
+  <li><a href="#HighRiskDevice" title="http://www.semanticweb.org/sadar/pec2##HighRiskDevice">HighRiskDevice</a></li>
+  <li><a href="#ImplantableDevice" title="http://www.semanticweb.org/sadar/pec2##ImplantableDevice">ImplantableDevice</a></li>
+  <li><a href="#IncidentType" title="http://www.semanticweb.org/sadar/pec2##IncidentType">IncidentType</a></li>
+  <li><a href="#InVitroDiagnosticDevice" title="http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice">InVitroDiagnosticDevice</a></li>
+  <li><a href="#IVDRDevice" title="http://www.semanticweb.org/sadar/pec2##IVDRDevice">IVDRDevice</a></li>
+  <li><a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a></li>
+  <li><a href="#MDRDevice" title="http://www.semanticweb.org/sadar/pec2##MDRDevice">MDRDevice</a></li>
+  <li><a href="#MedicalDevice" title="http://www.semanticweb.org/sadar/pec2##MedicalDevice">MedicalDevice</a></li>
+  <li><a href="#ProbabilityLevel" title="http://www.semanticweb.org/sadar/pec2##ProbabilityLevel">ProbabilityLevel</a></li>
+  <li><a href="#RegulatoryFramework" title="http://www.semanticweb.org/sadar/pec2##RegulatoryFramework">RegulatoryFramework</a></li>
+  <li><a href="#RequiresMonitoring" title="http://www.semanticweb.org/sadar/pec2##RequiresMonitoring">RequiresMonitoring</a></li>
+  <li><a href="#ReusableDevice" title="http://www.semanticweb.org/sadar/pec2##ReusableDevice">ReusableDevice</a></li>
+  <li><a href="#Risk" title="http://www.semanticweb.org/sadar/pec2##Risk">Risk</a></li>
+  <li><a href="#RiskClass" title="http://www.semanticweb.org/sadar/pec2##RiskClass">RiskClass</a></li>
+  <li><a href="#SeriousIncident" title="http://www.semanticweb.org/sadar/pec2##SeriousIncident">SeriousIncident</a></li>
+  <li><a href="#SeverityLevel" title="http://www.semanticweb.org/sadar/pec2##SeverityLevel">SeverityLevel</a></li>
  </ul>
- <div class="entity" id="ActionStatus">
-  <h3>Action Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/ActionStatus</p>
+ <div class="entity" id="CriticalRisk">
+  <h3># Critical Risk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##CriticalRisk</p>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#CorrectiveAction" title="http://www.representacionconocimientopec2.org/CorrectiveAction">Corrective Action</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Risk" title="http://www.semanticweb.org/sadar/pec2##Risk">Risk</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="ActiveDevice">
-  <h3>Active Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/ActiveDevice</p>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#MedicalDevice" title="http://www.representacionconocimientopec2.org/MedicalDevice">Medical Device</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="CompetentAuthority">
-  <h3>Competent Authority<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/CompetentAuthority</p>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="CorrectiveAction">
-  <h3>Corrective Action<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/CorrectiveAction</p>
+ <div class="entity" id="Incident">
+  <h3># Incident<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##Incident</p>
+  <div class="comment">
+   <span class="markdown">Represents an incident associated with a device.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -443,43 +410,104 @@ This section provides details for each class and property defined by [Ontology N
     has sub-classes
    </dt>
    <dd>
-    <a href="#ActionStatus" title="http://www.representacionconocimientopec2.org/ActionStatus">Action Status</a> <sup class="type-c" title="class">c</sup>
+    <a href="#IncidentType" title="http://www.semanticweb.org/sadar/pec2##IncidentType">IncidentType</a> <sup class="type-c" title="class">c</sup>, <a href="#SeriousIncident" title="http://www.semanticweb.org/sadar/pec2##SeriousIncident">SeriousIncident</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#actionType" title="http://www.representacionconocimientopec2.org/actionType">actionType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isCorrectiveActionFor" title="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#hasCorrectiveAction" title="http://www.representacionconocimientopec2.org/hasCorrectiveAction">hasCorrectiveAction</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#incidentId" title="http://www.semanticweb.org/sadar/pec2##incidentId">incidentId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#reportDate" title="http://www.semanticweb.org/sadar/pec2##reportDate">reportDate</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     has members
    </dt>
    <dd>
-    <a href="#Recall_Action_001" title="http://www.representacionconocimientopec2.org/Recall_Action_001">Recall Action 001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareUpdate_CA002" title="http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002">Software Update C A002</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#Incident_INC001" title="http://www.semanticweb.org/sadar/pec2##Incident_INC001"># Incident I N C001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Incident_INC002" title="http://www.semanticweb.org/sadar/pec2##Incident_INC002"># Incident I N C002</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="CriticalRisk">
-  <h3>Critical Risk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/CriticalRisk</p>
+ <div class="entity" id="ActionStatus">
+  <h3>ActionStatus<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##ActionStatus</p>
+  <div class="comment">
+   <span class="markdown">Represents the status of a corrective action (e.g., pending, completed).</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#Risk" title="http://www.representacionconocimientopec2.org/Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ActiveDevice">
+  <h3>ActiveDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##ActiveDevice</p>
+  <div class="comment">
+   <span class="markdown">Represents a medical device that depends on a source of energy other than that generated by the human body.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/sadar/pec2##MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CompetentAuthority">
+  <h3>CompetentAuthority<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##CompetentAuthority</p>
+  <div class="comment">
+   <span class="markdown">Represents an official authority responsible for regulating and supervising medical devices.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CorrectiveAction">
+  <h3>CorrectiveAction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##CorrectiveAction</p>
+  <div class="comment">
+   <span class="markdown">Represents a corrective action applied in response to an incident.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ActionStatus" title="http://www.semanticweb.org/sadar/pec2##ActionStatus">ActionStatus</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#actionType" title="http://www.semanticweb.org/sadar/pec2##actionType">actionType</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#RecallAction_CA001" title="http://www.semanticweb.org/sadar/pec2##RecallAction_CA001"># Recall Action C A001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SoftwareUpdate_CA002" title="http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002"># Software Update C A002</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="Device">
   <h3>Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/Device</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##Device</p>
+  <div class="comment">
+   <span class="markdown">Represents a medical device or an in vitro diagnostic device.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -489,241 +517,290 @@ This section provides details for each class and property defined by [Ontology N
     has sub-classes
    </dt>
    <dd>
-    <a href="#InVitroDiagnosticDevice" title="http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice">In Vitro Diagnostic Device</a> <sup class="type-c" title="class">c</sup>, <a href="#MedicalDevice" title="http://www.representacionconocimientopec2.org/MedicalDevice">Medical Device</a> <sup class="type-c" title="class">c</sup>, <a href="#RequiresMonitoring" title="http://www.representacionconocimientopec2.org/RequiresMonitoring">Requires Monitoring</a> <sup class="type-c" title="class">c</sup>
+    <a href="#InVitroDiagnosticDevice" title="http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice">InVitroDiagnosticDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#MedicalDevice" title="http://www.semanticweb.org/sadar/pec2##MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#RequiresMonitoring" title="http://www.semanticweb.org/sadar/pec2##RequiresMonitoring">RequiresMonitoring</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#deviceId" title="http://www.representacionconocimientopec2.org/deviceId">deviceId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#deviceName" title="http://www.representacionconocimientopec2.org/deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#deviceType" title="http://www.representacionconocimientopec2.org/deviceType">deviceType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasManufacturer" title="http://www.representacionconocimientopec2.org/hasManufacturer">hasManuFacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskClass" title="http://www.representacionconocimientopec2.org/hasRiskClass">hasRiskClass</a> <sup class="type-op" title="object property">op</sup>, <a href="#intendedPurpose" title="http://www.representacionconocimientopec2.org/intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#involvesDevice" title="http://www.representacionconocimientopec2.org/involvesDevice">involvesDevice</a> <sup class="type-op" title="object property">op</sup>, <a href="#manufactures" title="http://www.representacionconocimientopec2.org/manufactures">manufactures</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#deviceIdentifier" title="http://www.semanticweb.org/sadar/pec2##deviceIdentifier">deviceIdentifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#deviceName" title="http://www.semanticweb.org/sadar/pec2##deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#deviceType" title="http://www.semanticweb.org/sadar/pec2##deviceType">deviceType</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#intendedPurpose" title="http://www.semanticweb.org/sadar/pec2##intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     has members
    </dt>
    <dd>
-    <a href="#HeartMate3LVAD_DEV001" title="http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001">Heart Mate3 L V A D D E V001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MicraAV_DEV002" title="http://www.representacionconocimientopec2.org/MicraAV_DEV002">Micra A V D E V002</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#HeartMate3LVAD_DEV001" title="http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001"># Heart Mate3 L V A D D E V001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MicraAV_DEV002" title="http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002"># Micra A V D E V002</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
+ </div>
+ <div class="entity" id="DeviceType">
+  <h3>DeviceType<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##DeviceType</p>
+  <div class="comment">
+   <span class="markdown">Represents the regulatory risk classification of a device.</span>
+  </div>
  </div>
  <div class="entity" id="HighRiskDevice">
-  <h3>High Risk Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/HighRiskDevice</p>
+  <h3>HighRiskDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##HighRiskDevice</p>
+  <div class="comment">
+   <span class="markdown">Represents a medical device classified as high risk based on regulatory criteria.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#MedicalDevice" title="http://www.representacionconocimientopec2.org/MedicalDevice">Medical Device</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="IVDRDevice">
-  <h3>I V D R Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/IVDRDevice</p>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#InVitroDiagnosticDevice" title="http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice">In Vitro Diagnostic Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/sadar/pec2##MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="ImplantableDevice">
-  <h3>Implantable Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/ImplantableDevice</p>
+  <h3>ImplantableDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##ImplantableDevice</p>
+  <div class="comment">
+   <span class="markdown">Represents a medical device intended to be totally or partially introduced into the human body.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#MedicalDevice" title="http://www.representacionconocimientopec2.org/MedicalDevice">Medical Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/sadar/pec2##MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IncidentType">
+  <h3>IncidentType<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##IncidentType</p>
+  <div class="comment">
+   <span class="markdown">Represents the classification or type of an incident.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="InVitroDiagnosticDevice">
-  <h3>In Vitro Diagnostic Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/InVitroDiagnosticDevice</p>
+  <h3>InVitroDiagnosticDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice</p>
+  <div class="comment">
+   <span class="markdown">Represents a device used for the in vitro examination of samples derived from the human body.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has sub-classes
    </dt>
    <dd>
-    <a href="#IVDRDevice" title="http://www.representacionconocimientopec2.org/IVDRDevice">I V D R Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#IVDRDevice" title="http://www.semanticweb.org/sadar/pec2##IVDRDevice">IVDRDevice</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="Incident">
-  <h3>Incident<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/Incident</p>
+ <div class="entity" id="IVDRDevice">
+  <h3>IVDRDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##IVDRDevice</p>
+  <div class="comment">
+   <span class="markdown">Represents an in vitro diagnostic device regulated under the IVDR.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
-   <dd></dd>
+   <dd>
+    <a href="#InVitroDiagnosticDevice" title="http://www.semanticweb.org/sadar/pec2##InVitroDiagnosticDevice">InVitroDiagnosticDevice</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Manufacturer">
+  <h3>Manufacturer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##Manufacturer</p>
+  <div class="comment">
+   <span class="markdown">Represents a manufacturer of medical devices.</span>
+  </div>
+  <dl class="description">
    <dt>
     has sub-classes
    </dt>
    <dd>
-    <a href="#IncidentType" title="http://www.representacionconocimientopec2.org/IncidentType">Incident Type</a> <sup class="type-c" title="class">c</sup>, <a href="#SeriousIncident" title="http://www.representacionconocimientopec2.org/SeriousIncident">Serious Incident</a> <sup class="type-c" title="class">c</sup>
+    <a href="#CompetentAuthority" title="http://www.semanticweb.org/sadar/pec2##CompetentAuthority">CompetentAuthority</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#hasCorrectiveAction" title="http://www.representacionconocimientopec2.org/hasCorrectiveAction">hasCorrectiveAction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRisk" title="http://www.representacionconocimientopec2.org/hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup>, <a href="#incidentId" title="http://www.representacionconocimientopec2.org/incidentId">incidentId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#involvesDevice" title="http://www.representacionconocimientopec2.org/involvesDevice">involvesDevice</a> <sup class="type-op" title="object property">op</sup>, <a href="#reportDate" title="http://www.representacionconocimientopec2.org/reportDate">reportDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#reportedBy" title="http://www.representacionconocimientopec2.org/reportedBy">reportedBy</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#isCorrectiveActionFor" title="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#deviceId" title="http://www.semanticweb.org/sadar/pec2##deviceId">country</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#manufacturerName" title="http://www.semanticweb.org/sadar/pec2##manufacturerName">manufacturerName</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     has members
    </dt>
    <dd>
-    <a href="#Incident_INC001" title="http://www.representacionconocimientopec2.org/Incident_INC001">Incident I N C001</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Incident_INC002" title="http://www.representacionconocimientopec2.org/Incident_INC002">Incident I N C002</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="IncidentType">
-  <h3>Incident Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/IncidentType</p>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Abbott_Medical_Devices_MAN002" title="http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002"># Abbott Medical Devices M A N002</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Medtronic_plc_MAN001" title="http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001"># Medtronic plc M A N001</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="MDRDevice">
-  <h3>M D R Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/MDRDevice</p>
+  <h3>MDRDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##MDRDevice</p>
+  <div class="comment">
+   <span class="markdown">Represents a medical device regulated under the Medical Device Regulation (MDR).</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#MedicalDevice" title="http://www.representacionconocimientopec2.org/MedicalDevice">Medical Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/sadar/pec2##MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="MedicalDevice">
-  <h3>Medical Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/MedicalDevice</p>
+  <h3>MedicalDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##MedicalDevice</p>
+  <div class="comment">
+   <span class="markdown">Represents a medical device as defined by applicable medical regulations.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has sub-classes
    </dt>
    <dd>
-    <a href="#ActiveDevice" title="http://www.representacionconocimientopec2.org/ActiveDevice">Active Device</a> <sup class="type-c" title="class">c</sup>, <a href="#HighRiskDevice" title="http://www.representacionconocimientopec2.org/HighRiskDevice">High Risk Device</a> <sup class="type-c" title="class">c</sup>, <a href="#ImplantableDevice" title="http://www.representacionconocimientopec2.org/ImplantableDevice">Implantable Device</a> <sup class="type-c" title="class">c</sup>, <a href="#MDRDevice" title="http://www.representacionconocimientopec2.org/MDRDevice">M D R Device</a> <sup class="type-c" title="class">c</sup>, <a href="#ReusableDevice" title="http://www.representacionconocimientopec2.org/ReusableDevice">Reusable Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#ActiveDevice" title="http://www.semanticweb.org/sadar/pec2##ActiveDevice">ActiveDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#HighRiskDevice" title="http://www.semanticweb.org/sadar/pec2##HighRiskDevice">HighRiskDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#ImplantableDevice" title="http://www.semanticweb.org/sadar/pec2##ImplantableDevice">ImplantableDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#MDRDevice" title="http://www.semanticweb.org/sadar/pec2##MDRDevice">MDRDevice</a> <sup class="type-c" title="class">c</sup>, <a href="#ReusableDevice" title="http://www.semanticweb.org/sadar/pec2##ReusableDevice">ReusableDevice</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
+ <div class="entity" id="ProbabilityLevel">
+  <h3>ProbabilityLevel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##ProbabilityLevel</p>
+  <div class="comment">
+   <span class="markdown">Represents the probability level associated with a risk occurrence.</span>
+  </div>
+ </div>
+ <div class="entity" id="RegulatoryFramework">
+  <h3>RegulatoryFramework<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##RegulatoryFramework</p>
+  <div class="comment">
+   <span class="markdown">Represents the regulatory framework or legislation applicable to a medical device (e.g., MDR, IVDR).</span>
+  </div>
+ </div>
  <div class="entity" id="RequiresMonitoring">
-  <h3>Requires Monitoring<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/RequiresMonitoring</p>
+  <h3>RequiresMonitoring<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##RequiresMonitoring</p>
+  <div class="comment">
+   <span class="markdown">Represents a device that requires continuous or periodic monitoring during its use.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="ReusableDevice">
-  <h3>Reusable Device<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/ReusableDevice</p>
+  <h3>ReusableDevice<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##ReusableDevice</p>
+  <div class="comment">
+   <span class="markdown">Represents a medical device intended to be used multiple times.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#MedicalDevice" title="http://www.representacionconocimientopec2.org/MedicalDevice">Medical Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#MedicalDevice" title="http://www.semanticweb.org/sadar/pec2##MedicalDevice">MedicalDevice</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
  <div class="entity" id="Risk">
   <h3>Risk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/Risk</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##Risk</p>
+  <div class="comment">
+   <span class="markdown">Represents a risk associated with a medical device or incident.</span>
+  </div>
   <dl class="description">
    <dt>
     has sub-classes
    </dt>
    <dd>
-    <a href="#CriticalRisk" title="http://www.representacionconocimientopec2.org/CriticalRisk">Critical Risk</a> <sup class="type-c" title="class">c</sup>
+    <a href="#CriticalRisk" title="http://www.semanticweb.org/sadar/pec2##CriticalRisk"># Critical Risk</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#riskName" title="http://www.representacionconocimientopec2.org/riskName">riskName</a> <sup class="type-dp" title="data property">dp</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#hasRisk" title="http://www.representacionconocimientopec2.org/hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#riskName" title="http://www.semanticweb.org/sadar/pec2##riskName">riskName</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     has members
    </dt>
    <dd>
-    <a href="#PacinFailureRisk_R002" title="http://www.representacionconocimientopec2.org/PacinFailureRisk_R002">Pacin Failure Risk R002</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PumpFailureRisk_R001" title="http://www.representacionconocimientopec2.org/PumpFailureRisk_R001">Pump Failure Risk R001</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#PacingFailureRisk_R002" title="http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002"># Pacing Failure Risk R002</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PumpFailureRisk_R001" title="http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001"># Pump Failure Risk R001</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
+ <div class="entity" id="RiskClass">
+  <h3>RiskClass<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##RiskClass</p>
+  <div class="comment">
+   <span class="markdown">Represents the classification of a device according to its level of risk.</span>
+  </div>
+ </div>
  <div class="entity" id="SeriousIncident">
-  <h3>Serious Incident<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/SeriousIncident</p>
+  <h3>SeriousIncident<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##SeriousIncident</p>
+  <div class="comment">
+   <span class="markdown">Represents an incident that has serious consequences such as death or serious deterioration of health.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
    </dt>
    <dd>
-    <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
+ </div>
+ <div class="entity" id="SeverityLevel">
+  <h3>SeverityLevel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##SeverityLevel</p>
+  <div class="comment">
+   <span class="markdown">Represents the severity level of a risk or incident.</span>
+  </div>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#hasCorrectiveAction" title="http://www.representacionconocimientopec2.org/hasCorrectiveAction">hasCorrectiveAction</a></li>
-  <li><a href="#hasManufacturer" title="http://www.representacionconocimientopec2.org/hasManufacturer">hasManuFacturer</a></li>
-  <li><a href="#hasRisk" title="http://www.representacionconocimientopec2.org/hasRisk">hasRisk</a></li>
-  <li><a href="#hasRiskClass" title="http://www.representacionconocimientopec2.org/hasRiskClass">hasRiskClass</a></li>
-  <li><a href="#involvesDevice" title="http://www.representacionconocimientopec2.org/involvesDevice">involvesDevice</a></li>
-  <li><a href="#isCorrectiveActionFor" title="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">isCorrectiveActionFor</a></li>
-  <li><a href="#manufactures" title="http://www.representacionconocimientopec2.org/manufactures">manufactures</a></li>
-  <li><a href="#reportedBy" title="http://www.representacionconocimientopec2.org/reportedBy">reportedBy</a></li>
+  <li><a href="#hasCorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction">hasCorrectiveAction</a></li>
+  <li><a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a></li>
+  <li><a href="#hasRisk" title="http://www.semanticweb.org/sadar/pec2##hasRisk">hasRisk</a></li>
+  <li><a href="#hasRiskClass" title="http://www.semanticweb.org/sadar/pec2##hasRiskClass">hasRiskClass</a></li>
+  <li><a href="#involvesDevice" title="http://www.semanticweb.org/sadar/pec2##involvesDevice">involvesDevice</a></li>
+  <li><a href="#isCorrectiveActionFor" title="http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor">isCorrectiveActionFor</a></li>
+  <li><a href="#manufactures" title="http://www.semanticweb.org/sadar/pec2##manufactures">manufactures</a></li>
+  <li><a href="#reportedBy" title="http://www.semanticweb.org/sadar/pec2##reportedBy">reportedBy</a></li>
  </ul>
  <div class="entity" id="hasCorrectiveAction">
   <h3>hasCorrectiveAction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/hasCorrectiveAction</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction</p>
   <div class="comment">
-   <span class="markdown">Relates an Incident to a CorrectiveAction.</span>
+   <span class="markdown">Relates an Incident to a CorrectiveAction applied to it.</span>
   </div>
   <div class="description">
    <dl>
@@ -731,80 +808,87 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#CorrectiveAction" title="http://www.representacionconocimientopec2.org/CorrectiveAction">Corrective Action</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#CorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#isCorrectiveActionFor" title="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#isCorrectiveActionFor" title="http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="hasManufacturer">
-  <h3>hasManuFacturer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/hasManufacturer</p>
+  <h3>hasManufacturer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##hasManufacturer</p>
   <div class="comment">
-   <span class="markdown">Relates a Device to it's Manufacturer.</span>
+   <span class="markdown">Relates a Device to its Manufacturer.</span>
   </div>
   <div class="description">
+   <p><strong>has characteristics: </strong> inverse functional</p>
    <dl>
     <dt>
      has domain
     </dt>
     <dd>
-     <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#manufactures" title="http://www.representacionconocimientopec2.org/manufactures">manufactures</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#manufactures" title="http://www.semanticweb.org/sadar/pec2##manufactures">manufactures</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="hasRisk">
   <h3>hasRisk<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/hasRisk</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##hasRisk</p>
   <div class="comment">
-   <span class="markdown">Relates an Incented to a Risk.</span>
+   <span class="markdown">Relates an Incident to an identified Risk.</span>
   </div>
   <div class="description">
    <dl>
     <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topObjectProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topObjectProperty">top Object Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
      has domain
     </dt>
     <dd>
-     <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#Risk" title="http://www.representacionconocimientopec2.org/Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Risk" title="http://www.semanticweb.org/sadar/pec2##Risk">Risk</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="hasRiskClass">
   <h3>hasRiskClass<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/hasRiskClass</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##hasRiskClass</p>
   <div class="comment">
-   <span class="markdown">Relates a Device to a RiskClass.</span>
+   <span class="markdown">Relates a Device to its RiskClass.</span>
   </div>
   <div class="description">
    <dl>
@@ -812,22 +896,22 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="http://www.representacionconocimientopec2.org/RiskClass" target="_blank" title="http://www.representacionconocimientopec2.org/RiskClass">Risk Class</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#RiskClass" title="http://www.semanticweb.org/sadar/pec2##RiskClass">RiskClass</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="involvesDevice">
   <h3>involvesDevice<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/involvesDevice</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##involvesDevice</p>
   <div class="comment">
-   <span class="markdown">Relates an Incident to a Device.</span>
+   <span class="markdown">Relates an Incident to the Device involved in it.</span>
   </div>
   <div class="description">
    <dl>
@@ -835,20 +919,20 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="isCorrectiveActionFor">
   <h3>isCorrectiveActionFor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/isCorrectiveActionFor</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor</p>
   <div class="comment">
    <span class="markdown">Relates a CorrectiveAction to the Incident it addresses.</span>
   </div>
@@ -859,26 +943,26 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#CorrectiveAction" title="http://www.representacionconocimientopec2.org/CorrectiveAction">Corrective Action</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#CorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#hasCorrectiveAction" title="http://www.representacionconocimientopec2.org/hasCorrectiveAction">hasCorrectiveAction</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasCorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##hasCorrectiveAction">hasCorrectiveAction</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="manufactures">
   <h3>manufactures<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/manufactures</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##manufactures</p>
   <div class="comment">
    <span class="markdown">Relates a Manufacturer to the Devices it produces.</span>
   </div>
@@ -889,28 +973,28 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#hasManufacturer" title="http://www.representacionconocimientopec2.org/hasManufacturer">hasManuFacturer</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="reportedBy">
   <h3>reportedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/reportedBy</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##reportedBy</p>
   <div class="comment">
-   <span class="markdown">Relates an Incident to a Manufacturer.</span>
+   <span class="markdown">Relates an Incident to the Manufacturer that reported it.</span>
   </div>
   <div class="description">
    <dl>
@@ -918,13 +1002,13 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+     <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -932,20 +1016,20 @@ This section provides details for each class and property defined by [Ontology N
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
-  <li><a href="#actionType" title="http://www.representacionconocimientopec2.org/actionType">actionType</a></li>
-  <li><a href="#country" title="http://www.representacionconocimientopec2.org/country">country</a></li>
-  <li><a href="#deviceId" title="http://www.representacionconocimientopec2.org/deviceId">deviceId</a></li>
-  <li><a href="#deviceName" title="http://www.representacionconocimientopec2.org/deviceName">deviceName</a></li>
-  <li><a href="#deviceType" title="http://www.representacionconocimientopec2.org/deviceType">deviceType</a></li>
-  <li><a href="#incidentId" title="http://www.representacionconocimientopec2.org/incidentId">incidentId</a></li>
-  <li><a href="#intendedPurpose" title="http://www.representacionconocimientopec2.org/intendedPurpose">intendedPurpose</a></li>
-  <li><a href="#manufacturerName" title="http://www.representacionconocimientopec2.org/manufacturerName">manufacturerName</a></li>
-  <li><a href="#reportDate" title="http://www.representacionconocimientopec2.org/reportDate">reportDate</a></li>
-  <li><a href="#riskName" title="http://www.representacionconocimientopec2.org/riskName">riskName</a></li>
+  <li><a href="#actionType" title="http://www.semanticweb.org/sadar/pec2##actionType">actionType</a></li>
+  <li><a href="#deviceId" title="http://www.semanticweb.org/sadar/pec2##deviceId">country</a></li>
+  <li><a href="#deviceIdentifier" title="http://www.semanticweb.org/sadar/pec2##deviceIdentifier">deviceIdentifier</a></li>
+  <li><a href="#deviceName" title="http://www.semanticweb.org/sadar/pec2##deviceName">deviceName</a></li>
+  <li><a href="#deviceType" title="http://www.semanticweb.org/sadar/pec2##deviceType">deviceType</a></li>
+  <li><a href="#incidentId" title="http://www.semanticweb.org/sadar/pec2##incidentId">incidentId</a></li>
+  <li><a href="#intendedPurpose" title="http://www.semanticweb.org/sadar/pec2##intendedPurpose">intendedPurpose</a></li>
+  <li><a href="#manufacturerName" title="http://www.semanticweb.org/sadar/pec2##manufacturerName">manufacturerName</a></li>
+  <li><a href="#reportDate" title="http://www.semanticweb.org/sadar/pec2##reportDate">reportDate</a></li>
+  <li><a href="#riskName" title="http://www.semanticweb.org/sadar/pec2##riskName">riskName</a></li>
  </ul>
  <div class="entity" id="actionType">
   <h3>actionType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/actionType</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##actionType</p>
   <div class="comment">
    <span class="markdown">Stores the type of a CorrectiveAction.</span>
   </div>
@@ -955,30 +1039,7 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#CorrectiveAction" title="http://www.representacionconocimientopec2.org/CorrectiveAction">Corrective Action</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="country">
-  <h3>country<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/country</p>
-  <div class="comment">
-   <span class="markdown">Stores the country of a Manufacturer.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+     <a href="#CorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -990,8 +1051,31 @@ This section provides details for each class and property defined by [Ontology N
   </div>
  </div>
  <div class="entity" id="deviceId">
-  <h3>deviceId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/deviceId</p>
+  <h3>country<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##deviceId</p>
+  <div class="comment">
+   <span class="markdown">Stores the country of a Manufacturer.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="deviceIdentifier">
+  <h3>deviceIdentifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##deviceIdentifier</p>
   <div class="comment">
    <span class="markdown">Stores the identifier of a Device.</span>
   </div>
@@ -1001,7 +1085,10 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#hasRiskClass" title="http://www.semanticweb.org/sadar/pec2##hasRiskClass">hasRiskClass</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#RiskClass" title="http://www.semanticweb.org/sadar/pec2##RiskClass">RiskClass</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1014,7 +1101,7 @@ This section provides details for each class and property defined by [Ontology N
  </div>
  <div class="entity" id="deviceName">
   <h3>deviceName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/deviceName</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##deviceName</p>
   <div class="comment">
    <span class="markdown">Stores the name of a Device.</span>
   </div>
@@ -1024,7 +1111,7 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1037,7 +1124,7 @@ This section provides details for each class and property defined by [Ontology N
  </div>
  <div class="entity" id="deviceType">
   <h3>deviceType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/deviceType</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##deviceType</p>
   <div class="comment">
    <span class="markdown">Stores the type of a Device as a controlled literal value.</span>
   </div>
@@ -1047,7 +1134,7 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1060,7 +1147,7 @@ This section provides details for each class and property defined by [Ontology N
  </div>
  <div class="entity" id="incidentId">
   <h3>incidentId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/incidentId</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##incidentId</p>
   <div class="comment">
    <span class="markdown">Stores the identifier of an Incident.</span>
   </div>
@@ -1070,20 +1157,20 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
  </div>
  <div class="entity" id="intendedPurpose">
   <h3>intendedPurpose<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/intendedPurpose</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##intendedPurpose</p>
   <div class="comment">
    <span class="markdown">Stores the intended purpose of a Device.</span>
   </div>
@@ -1093,7 +1180,7 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1106,7 +1193,7 @@ This section provides details for each class and property defined by [Ontology N
  </div>
  <div class="entity" id="manufacturerName">
   <h3>manufacturerName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/manufacturerName</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##manufacturerName</p>
   <div class="comment">
    <span class="markdown">Stores the name of a Manufacturer.</span>
   </div>
@@ -1116,7 +1203,7 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1129,7 +1216,7 @@ This section provides details for each class and property defined by [Ontology N
  </div>
  <div class="entity" id="reportDate">
   <h3>reportDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/reportDate</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##reportDate</p>
   <div class="comment">
    <span class="markdown">Stores the report date of an Incident.</span>
   </div>
@@ -1139,7 +1226,7 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1152,7 +1239,7 @@ This section provides details for each class and property defined by [Ontology N
  </div>
  <div class="entity" id="riskName">
   <h3>riskName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/riskName</p>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##riskName</p>
   <div class="comment">
    <span class="markdown">Stores the name of a Risk.</span>
   </div>
@@ -1162,7 +1249,7 @@ This section provides details for each class and property defined by [Ontology N
      has domain
     </dt>
     <dd>
-     <a href="#Risk" title="http://www.representacionconocimientopec2.org/Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Risk" title="http://www.semanticweb.org/sadar/pec2##Risk">Risk</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1176,269 +1263,269 @@ This section provides details for each class and property defined by [Ontology N
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
-  <li><a href="#Abbott_Medical_Devices_MAN002" title="http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002"> <span>Abbott Medical Devices M A N002</span> </a></li>
-  <li><a href="#HeartMate3LVAD_DEV001" title="http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001"> <span>Heart Mate3 L V A D D E V001</span> </a></li>
-  <li><a href="#Incident_INC001" title="http://www.representacionconocimientopec2.org/Incident_INC001"> <span>Incident I N C001</span> </a></li>
-  <li><a href="#Incident_INC002" title="http://www.representacionconocimientopec2.org/Incident_INC002"> <span>Incident I N C002</span> </a></li>
-  <li><a href="#Medtronic_plc_MAN001" title="http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001"> <span>Medtronic plc M A N001</span> </a></li>
-  <li><a href="#MicraAV_DEV002" title="http://www.representacionconocimientopec2.org/MicraAV_DEV002"> <span>Micra A V D E V002</span> </a></li>
-  <li><a href="#PacinFailureRisk_R002" title="http://www.representacionconocimientopec2.org/PacinFailureRisk_R002"> <span>Pacin Failure Risk R002</span> </a></li>
-  <li><a href="#PumpFailureRisk_R001" title="http://www.representacionconocimientopec2.org/PumpFailureRisk_R001"> <span>Pump Failure Risk R001</span> </a></li>
-  <li><a href="#Recall_Action_001" title="http://www.representacionconocimientopec2.org/Recall_Action_001"> <span>Recall Action 001</span> </a></li>
-  <li><a href="#SoftwareUpdate_CA002" title="http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002"> <span>Software Update C A002</span> </a></li>
+  <li><a href="#Abbott_Medical_Devices_MAN002" title="http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002"> <span># Abbott Medical Devices M A N002</span> </a></li>
+  <li><a href="#HeartMate3LVAD_DEV001" title="http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001"> <span># Heart Mate3 L V A D D E V001</span> </a></li>
+  <li><a href="#Incident_INC001" title="http://www.semanticweb.org/sadar/pec2##Incident_INC001"> <span># Incident I N C001</span> </a></li>
+  <li><a href="#Incident_INC002" title="http://www.semanticweb.org/sadar/pec2##Incident_INC002"> <span># Incident I N C002</span> </a></li>
+  <li><a href="#Medtronic_plc_MAN001" title="http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001"> <span># Medtronic plc M A N001</span> </a></li>
+  <li><a href="#MicraAV_DEV002" title="http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002"> <span># Micra A V D E V002</span> </a></li>
+  <li><a href="#PacingFailureRisk_R002" title="http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002"> <span># Pacing Failure Risk R002</span> </a></li>
+  <li><a href="#PumpFailureRisk_R001" title="http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001"> <span># Pump Failure Risk R001</span> </a></li>
+  <li><a href="#RecallAction_CA001" title="http://www.semanticweb.org/sadar/pec2##RecallAction_CA001"> <span># Recall Action C A001</span> </a></li>
+  <li><a href="#SoftwareUpdate_CA002" title="http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002"> <span># Software Update C A002</span> </a></li>
  </ul>
  <div class="entity" id="Abbott_Medical_Devices_MAN002">
-  <h3>Abbott Medical Devices M A N002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/Abbott_Medical_Devices_MAN002</p>
+  <h3># Abbott Medical Devices M A N002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##Abbott_Medical_Devices_MAN002</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#country" title="http://www.representacionconocimientopec2.org/country">country</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Germany"</span>
+    <a href="#deviceId" title="http://www.semanticweb.org/sadar/pec2##deviceId">country</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Germany"</span>
    </dd>
    <dd>
-    <a href="#manufacturerName" title="http://www.representacionconocimientopec2.org/manufacturerName">manufacturerName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Abbott Medical Devices"</span>
+    <a href="#manufacturerName" title="http://www.semanticweb.org/sadar/pec2##manufacturerName">manufacturerName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Abbott Medical Devices"</span>
    </dd>
   </dl>
  </div>
  <div class="entity" id="HeartMate3LVAD_DEV001">
-  <h3>Heart Mate3 L V A D D E V001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001</p>
+  <h3># Heart Mate3 L V A D D E V001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#hasManufacturer" title="http://www.representacionconocimientopec2.org/hasManufacturer">hasManuFacturer</a> <sup class="type-op" title="object property">op</sup> <a href="#Medtronic_plc_MAN001" title="http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001">Medtronic plc M A N001</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <a href="#Medtronic_plc_MAN001" title="http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001"># Medtronic plc M A N001</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#deviceId" title="http://www.representacionconocimientopec2.org/deviceId">deviceId</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"DEV-001"</span>
+    <a href="#deviceIdentifier" title="http://www.semanticweb.org/sadar/pec2##deviceIdentifier">deviceIdentifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"DEV-001"</span>
    </dd>
    <dd>
-    <a href="#deviceName" title="http://www.representacionconocimientopec2.org/deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"HeartMate 3 LVAD"</span>
+    <a href="#deviceName" title="http://www.semanticweb.org/sadar/pec2##deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"HeartMate 3 LVAD"</span>
    </dd>
    <dd>
-    <a href="#deviceType" title="http://www.representacionconocimientopec2.org/deviceType">deviceType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ImplantableActiveDevice"</span>
+    <a href="#deviceType" title="http://www.semanticweb.org/sadar/pec2##deviceType">deviceType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ImplantableActiveDevice"</span>
    </dd>
    <dd>
-    <a href="#intendedPurpose" title="http://www.representacionconocimientopec2.org/intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ventricular assist device for end-stage heart failure"</span>
+    <a href="#intendedPurpose" title="http://www.semanticweb.org/sadar/pec2##intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ventricular assist device for end-stage heart failure"</span>
    </dd>
   </dl>
  </div>
  <div class="entity" id="Incident_INC001">
-  <h3>Incident I N C001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/Incident_INC001</p>
+  <h3># Incident I N C001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##Incident_INC001</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#involvesDevice" title="http://www.representacionconocimientopec2.org/involvesDevice">involvesDevice</a> <sup class="type-op" title="object property">op</sup> <a href="#HeartMate3LVAD_DEV001" title="http://www.representacionconocimientopec2.org/HeartMate3LVAD_DEV001">Heart Mate3 L V A D D E V001</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#hasRisk" title="http://www.semanticweb.org/sadar/pec2##hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup> <a href="#PumpFailureRisk_R001" title="http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001"># Pump Failure Risk R001</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#incidentId" title="http://www.representacionconocimientopec2.org/incidentId">incidentId</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"INC-001"</span>
+    <a href="#involvesDevice" title="http://www.semanticweb.org/sadar/pec2##involvesDevice">involvesDevice</a> <sup class="type-op" title="object property">op</sup> <a href="#HeartMate3LVAD_DEV001" title="http://www.semanticweb.org/sadar/pec2##HeartMate3LVAD_DEV001"># Heart Mate3 L V A D D E V001</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#reportDate" title="http://www.representacionconocimientopec2.org/reportDate">reportDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2023-03-15T09:30:00"</span>
+    <a href="#incidentId" title="http://www.semanticweb.org/sadar/pec2##incidentId">incidentId</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"INC-001"</span>
+   </dd>
+   <dd>
+    <a href="#reportDate" title="http://www.semanticweb.org/sadar/pec2##reportDate">reportDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2023-03-15T09:30:00"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
    </dd>
   </dl>
  </div>
  <div class="entity" id="Incident_INC002">
-  <h3>Incident I N C002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/Incident_INC002</p>
+  <h3># Incident I N C002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##Incident_INC002</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#involvesDevice" title="http://www.representacionconocimientopec2.org/involvesDevice">involvesDevice</a> <sup class="type-op" title="object property">op</sup> <a href="#MicraAV_DEV002" title="http://www.representacionconocimientopec2.org/MicraAV_DEV002">Micra A V D E V002</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#hasRisk" title="http://www.semanticweb.org/sadar/pec2##hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup> <a href="#PacingFailureRisk_R002" title="http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002"># Pacing Failure Risk R002</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#incidentId" title="http://www.representacionconocimientopec2.org/incidentId">incidentId</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"INC-002"</span>
+    <a href="#involvesDevice" title="http://www.semanticweb.org/sadar/pec2##involvesDevice">involvesDevice</a> <sup class="type-op" title="object property">op</sup> <a href="#MicraAV_DEV002" title="http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002"># Micra A V D E V002</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#reportDate" title="http://www.representacionconocimientopec2.org/reportDate">reportDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2023-04-10T14:20:00"</span>
+    <a href="#incidentId" title="http://www.semanticweb.org/sadar/pec2##incidentId">incidentId</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"INC-002"</span>
+   </dd>
+   <dd>
+    <a href="#reportDate" title="http://www.semanticweb.org/sadar/pec2##reportDate">reportDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2023-04-10T14:20:00"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
    </dd>
   </dl>
  </div>
  <div class="entity" id="Medtronic_plc_MAN001">
-  <h3>Medtronic plc M A N001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001</p>
+  <h3># Medtronic plc M A N001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#country" title="http://www.representacionconocimientopec2.org/country">country</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ireland"</span>
+    <a href="#deviceId" title="http://www.semanticweb.org/sadar/pec2##deviceId">country</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ireland"</span>
    </dd>
    <dd>
-    <a href="#manufacturerName" title="http://www.representacionconocimientopec2.org/manufacturerName">manufacturerName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Medronic plc"</span>
+    <a href="#manufacturerName" title="http://www.semanticweb.org/sadar/pec2##manufacturerName">manufacturerName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Medtronic plc"</span>
    </dd>
   </dl>
  </div>
  <div class="entity" id="MicraAV_DEV002">
-  <h3>Micra A V D E V002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/MicraAV_DEV002</p>
+  <h3># Micra A V D E V002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##MicraAV_DEV002</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#hasManufacturer" title="http://www.representacionconocimientopec2.org/hasManufacturer">hasManuFacturer</a> <sup class="type-op" title="object property">op</sup> <a href="#Medtronic_plc_MAN001" title="http://www.representacionconocimientopec2.org/Medtronic_plc_MAN001">Medtronic plc M A N001</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup> <a href="#Medtronic_plc_MAN001" title="http://www.semanticweb.org/sadar/pec2##Medtronic_plc_MAN001"># Medtronic plc M A N001</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#deviceId" title="http://www.representacionconocimientopec2.org/deviceId">deviceId</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"DEV-002"</span>
+    <a href="#deviceIdentifier" title="http://www.semanticweb.org/sadar/pec2##deviceIdentifier">deviceIdentifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"DEV-002"</span>
    </dd>
    <dd>
-    <a href="#deviceName" title="http://www.representacionconocimientopec2.org/deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Micra AV Transcatheter Pacing System"</span>
+    <a href="#deviceName" title="http://www.semanticweb.org/sadar/pec2##deviceName">deviceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Micra AV Transcatheter Pacing System"</span>
    </dd>
    <dd>
-    <a href="#deviceType" title="http://www.representacionconocimientopec2.org/deviceType">deviceType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ActiveImplant"</span>
+    <a href="#deviceType" title="http://www.semanticweb.org/sadar/pec2##deviceType">deviceType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ActiveImplant"</span>
    </dd>
    <dd>
-    <a href="#intendedPurpose" title="http://www.representacionconocimientopec2.org/intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Leadless cardiac pacemaker for atrioventricular synchrony"</span>
+    <a href="#intendedPurpose" title="http://www.semanticweb.org/sadar/pec2##intendedPurpose">intendedPurpose</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Leadless cardiac pacemaker for atrioventricular synchrony"</span>
    </dd>
   </dl>
  </div>
- <div class="entity" id="PacinFailureRisk_R002">
-  <h3>Pacin Failure Risk R002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/PacinFailureRisk_R002</p>
+ <div class="entity" id="PacingFailureRisk_R002">
+  <h3># Pacing Failure Risk R002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##PacingFailureRisk_R002</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#Risk" title="http://www.representacionconocimientopec2.org/Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Risk" title="http://www.semanticweb.org/sadar/pec2##Risk">Risk</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#hasRisk" title="http://www.representacionconocimientopec2.org/hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup> <a href="#Incident_INC002" title="http://www.representacionconocimientopec2.org/Incident_INC002">Incident I N C002</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="#riskName" title="http://www.representacionconocimientopec2.org/riskName">riskName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Pacing Failure"</span>
+    <a href="#riskName" title="http://www.semanticweb.org/sadar/pec2##riskName">riskName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Pacing Failure"</span>
    </dd>
   </dl>
  </div>
  <div class="entity" id="PumpFailureRisk_R001">
-  <h3>Pump Failure Risk R001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/PumpFailureRisk_R001</p>
+  <h3># Pump Failure Risk R001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##PumpFailureRisk_R001</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#Risk" title="http://www.representacionconocimientopec2.org/Risk">Risk</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Risk" title="http://www.semanticweb.org/sadar/pec2##Risk">Risk</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#hasRisk" title="http://www.representacionconocimientopec2.org/hasRisk">hasRisk</a> <sup class="type-op" title="object property">op</sup> <a href="#PumpFailureRisk_R001" title="http://www.representacionconocimientopec2.org/PumpFailureRisk_R001">Pump Failure Risk R001</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="#riskName" title="http://www.representacionconocimientopec2.org/riskName">riskName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Pump Failure"</span>
+    <a href="#riskName" title="http://www.semanticweb.org/sadar/pec2##riskName">riskName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Pump Failure"</span>
    </dd>
   </dl>
  </div>
- <div class="entity" id="Recall_Action_001">
-  <h3>Recall Action 001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/Recall_Action_001</p>
+ <div class="entity" id="RecallAction_CA001">
+  <h3># Recall Action C A001<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##RecallAction_CA001</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#CorrectiveAction" title="http://www.representacionconocimientopec2.org/CorrectiveAction">Corrective Action</a> <sup class="type-c" title="class">c</sup>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#isCorrectiveActionFor" title="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup> <a href="#Incident_INC001" title="http://www.representacionconocimientopec2.org/Incident_INC001">Incident I N C001</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#isCorrectiveActionFor" title="http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup> <a href="#Incident_INC001" title="http://www.semanticweb.org/sadar/pec2##Incident_INC001"># Incident I N C001</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#actionType" title="http://www.representacionconocimientopec2.org/actionType">actionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Recall"</span>
+    <a href="#actionType" title="http://www.semanticweb.org/sadar/pec2##actionType">actionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Recall"</span>
    </dd>
   </dl>
  </div>
  <div class="entity" id="SoftwareUpdate_CA002">
-  <h3>Software Update C A002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.representacionconocimientopec2.org/SoftwareUpdate_CA002</p>
+  <h3># Software Update C A002<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/sadar/pec2##SoftwareUpdate_CA002</p>
   <dl class="description">
    <dt>
     belongs to
    </dt>
    <dd>
-    <a href="#CorrectiveAction" title="http://www.representacionconocimientopec2.org/CorrectiveAction">Corrective Action</a> <sup class="type-c" title="class">c</sup>
+    <a href="#CorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has facts
    </dt>
    <dd>
-    <a href="#isCorrectiveActionFor" title="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup> <a href="#Incident_INC002" title="http://www.representacionconocimientopec2.org/Incident_INC002">Incident I N C002</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#isCorrectiveActionFor" title="http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup> <a href="#Incident_INC002" title="http://www.semanticweb.org/sadar/pec2##Incident_INC002"># Incident I N C002</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
-    <a href="#actionType" title="http://www.representacionconocimientopec2.org/actionType">actionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Software Update"</span>
+    <a href="#actionType" title="http://www.semanticweb.org/sadar/pec2##actionType">actionType</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Software Update"</span>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
  <h3 id="swrlrules" class="list">SWRL rules</h3>
  <ul class="hlist">
-  <li><a href="#d4e762">Regla1</a></li>
-  <li><a href="#d4e681">Regla2</a></li>
-  <li><a href="#d4e843">Regla3</a></li>
+  <li><a href="#d4e1127">Regla1</a></li>
+  <li><a href="#d4e1046">Regla2</a></li>
+  <li><a href="#d4e965">Regla3</a></li>
  </ul>
- <div class="entity" id="d4e762">
+ <div class="entity" id="d4e1127">
   <h3>Regla1<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
-  <p>si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device<br><br><a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#involvesDevice" title="http://www.representacionconocimientopec2.org/involvesDevice">involvesDevice</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>(?)</p>
+  <p>establece que si un individuo es un incidente y está relacionado con un dispositivo mediante la propiedad involvesDevice, entonces dicho individuo se infiere como una instancia de la clase Device.<br><br><a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#involvesDevice" title="http://www.semanticweb.org/sadar/pec2##involvesDevice">involvesDevice</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>(?)</p>
  </div>
- <div class="entity" id="d4e681">
+ <div class="entity" id="d4e1046">
   <h3>Regla2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
-  <p>si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer)<br><br><a href="#Device" title="http://www.representacionconocimientopec2.org/Device">Device</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#hasManufacturer" title="http://www.representacionconocimientopec2.org/hasManufacturer">hasManuFacturer</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="http://www.representacionconocimientopec2.org/Manufacturer" target="_blank" title="http://www.representacionconocimientopec2.org/Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>(?)</p>
+  <p>si un individuo es un dispositivo y está relacionado con otro individuo mediante la propiedad hasManufacturer, entonces este último se clasifica como un fabricante (Manufacturer).<br><br><a href="#Device" title="http://www.semanticweb.org/sadar/pec2##Device">Device</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#hasManufacturer" title="http://www.semanticweb.org/sadar/pec2##hasManufacturer">hasManufacturer</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="#Manufacturer" title="http://www.semanticweb.org/sadar/pec2##Manufacturer">Manufacturer</a> <sup class="type-c" title="class">c</sup>(?)</p>
  </div>
- <div class="entity" id="d4e843">
+ <div class="entity" id="d4e965">
   <h3>Regla3<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
-  <p>si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident.<br><br><a href="#CorrectiveAction" title="http://www.representacionconocimientopec2.org/CorrectiveAction">Corrective Action</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#isCorrectiveActionFor" title="http://www.representacionconocimientopec2.org/isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="#Incident" title="http://www.representacionconocimientopec2.org/Incident">Incident</a> <sup class="type-c" title="class">c</sup>(?)</p>
+  <p>si un individuo es una acción correctiva y está relacionada con un incidente mediante la propiedad isCorrectiveActionFor, entonces dicho individuo se infiere como una instancia de la clase Incident.)<br><br><a href="#CorrectiveAction" title="http://www.semanticweb.org/sadar/pec2##CorrectiveAction">CorrectiveAction</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#isCorrectiveActionFor" title="http://www.semanticweb.org/sadar/pec2##isCorrectiveActionFor">isCorrectiveActionFor</a> <sup class="type-op" title="object property">op</sup>(?,?) -&gt; <a href="#Incident" title="http://www.semanticweb.org/sadar/pec2##Incident"># Incident</a> <sup class="type-c" title="class">c</sup>(?)</p>
  </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
